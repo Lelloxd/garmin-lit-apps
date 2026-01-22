@@ -3,7 +3,6 @@
         <fitField id="0" 
                   dataLabel="@Strings.label_swings" 
                   unitLabel="@Strings.units_swings" 
-                  fillColor="#00AA00" 
                   sortOrder="0" 
                   precision="0"
                   displayInActivitySummary="true" />

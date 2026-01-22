@@ -9,7 +9,7 @@
     "unit-label-key" : "units_swings",
     "sort-order" : 0,
     "precision" : 0,
-    "fill-color" : "rgba(0, 170, 0, 1.0)"
+    "fill-color" : null
   }, {
     "id" : 1,
     "chart-visible" : true,

@@ -4,474 +4,660 @@ using Toybox.WatchUi;
 using Toybox.System;
 [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Application,3,13,24]; ]
 using Toybox.Application;
-[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [ActivityRecording,4,13,30]; ]
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Application,4,13,24]; @symbol_usingdef<2> = [Properties,4,25,35]; @symbol_usingAlias = [Props,4,39,44]; ]
+using Toybox.Application.Properties as :Props;
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [ActivityRecording,5,13,30]; ]
 using Toybox.ActivityRecording;
-[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Sensor,5,13,19]; ]
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Sensor,6,13,19]; ]
 using Toybox.Sensor;
-[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [FitContributor,6,13,27]; ]
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [FitContributor,7,13,27]; ]
 using Toybox.FitContributor;
-[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [Math,7,13,17]; ]
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 8; @symbol_usingdef<0> = [Toybox,8,6,12]; @symbol_usingdef<1> = [Math,8,13,17]; ]
 using Toybox.Math;
-[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 8; @symbol_usingdef<0> = [Toybox,8,6,12]; @symbol_usingdef<1> = [Attention,8,13,22]; ]
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 9; @symbol_usingdef<0> = [Toybox,9,6,12]; @symbol_usingdef<1> = [Attention,9,13,22]; ]
 using Toybox.Attention;
-[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 10; @symbol_classdef = [GolfRangeDelegate,10,6,23]; @symbol_extends<0> = [WatchUi,10,32,39]; @symbol_extends<1> = [BehaviorDelegate,10,40,56]; ]
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 11; @symbol_classdef = [GolfRangeDelegate,11,6,23]; @symbol_extends<0> = [WatchUi,11,32,39]; @symbol_extends<1> = [BehaviorDelegate,11,40,56]; ]
 class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 10; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 11; ]
     <init> {
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 10; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 11; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 12; @position = 8; @symbol_vardef = [session,12,8,15]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 13; @position = 8; @symbol_vardef = [session,13,8,15]; ]
     var session = null;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 13; @position = 8; @symbol_vardef = [swingCount,13,8,18]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 14; @position = 8; @symbol_vardef = [swingCount,14,8,18]; ]
     var swingCount = 0;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 14; @position = 8; @symbol_vardef = [isRecording,14,8,19]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 15; @position = 8; @symbol_vardef = [isRecording,15,8,19]; ]
     var isRecording = false;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 15; @position = 8; @symbol_vardef = [totalDistance,15,8,21]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 16; @position = 8; @symbol_vardef = [totalDistance,16,8,21]; ]
     var totalDistance = 0;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 18; @position = 10; @symbol_constdef = [SWING_COUNT_FIELD_ID,18,10,30]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 17; @position = 8; @symbol_vardef = [parentView,17,8,18]; ]
+    var parentView = null;
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 20; @position = 10; @symbol_constdef = [SWING_COUNT_FIELD_ID,20,10,30]; ]
     const SWING_COUNT_FIELD_ID = 0;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 19; @position = 8; @symbol_vardef = [_swingCountField,19,8,24]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 21; @position = 8; @symbol_vardef = [_swingCountField,21,8,24]; ]
     var _swingCountField = null;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 22; @position = 8; @symbol_vardef = [lastSwingTime,22,8,21]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 24; @position = 8; @symbol_vardef = [lastSwingTime,24,8,21]; ]
     var lastSwingTime = 0;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 23; @position = 8; @symbol_vardef = [lastUpdateTime,23,8,22]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 25; @position = 8; @symbol_vardef = [lastUpdateTime,25,8,22]; ]
     var lastUpdateTime = 0;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 25; @position = 8; @symbol_vardef = [SWING_THRESHOLD,25,8,23]; ]
-    var SWING_THRESHOLD = 5000;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 26; @position = 10; @symbol_constdef = [MIN_TIME_BETWEEN_SWINGS,26,10,33]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 27; @position = 8; @symbol_vardef = [SWING_THRESHOLD,27,8,23]; ]
+    var SWING_THRESHOLD = 2000;
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 28; @position = 10; @symbol_constdef = [MIN_TIME_BETWEEN_SWINGS,28,10,33]; ]
     const MIN_TIME_BETWEEN_SWINGS = 1500;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 28; @position = 10; @symbol_constdef = [SWING_GRAPH_FIELD_ID,28,10,30]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 30; @position = 10; @symbol_constdef = [SWING_GRAPH_FIELD_ID,30,10,30]; ]
     const SWING_GRAPH_FIELD_ID = 1;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 29; @position = 8; @symbol_vardef = [_swingGraphField,29,8,24]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 31; @position = 8; @symbol_vardef = [_swingGraphField,31,8,24]; ]
     var _swingGraphField = null;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 31; @symbol_functiondef = [initialize,31,13,23]; ]
-    function initialize() as Void {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_31_26_47_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 32 8 ]
-        symbol [ BehaviorDelegate %tmp.2 32 8 24 ];
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 33; @symbol_functiondef = [initialize,33,9,19]; @symbol_param<0> = [view,33,20,24]; ]
+    function initialize(view) as Void {
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_33_26_59_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 34 8 ]
+        symbol [ BehaviorDelegate %tmp.2 34 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 32 25 35 ];
+        symbol [ initialize %tmp.3 34 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
 [ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 35 8 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_31_26_47_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_31_26_47_4_stop" ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 35 21 25 ];
+        symbol [ parentView ? 35 8 18 ];
+        putv self :parentView %tmp.4;
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 38 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_33_26_59_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_33_26_59_4_stop" ]
         %storedThreshold.1 = local;
-        symbol [ storedThreshold %storedThreshold.1 35 12 27 ];
-        symbol [ Application %tmp.4 35 30 41 ];
-        %tmp.4 = getm $.Toybox.Application;
-        symbol [ getApp %tmp.5 35 42 48 ];
-        %tmp.5 = getv function %tmp.4 :getApp;
-        %tmp.6 = invoke %tmp.4 %tmp.5();
-        symbol [ getProperty %tmp.7 35 51 62 ];
-        %tmp.7 = getv function %tmp.6 :getProperty;
+        symbol [ storedThreshold %storedThreshold.1 38 12 27 ];
+        %tmp.5 = null;
+        lputv %storedThreshold.1 %tmp.5;
+        symbol [ storedThreshold %storedThreshold.1 38 12 27 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 39 8 ]
+        try @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_beginTry @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_endTry @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_catch @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_finally;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_beginTry:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_12_41_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 40 12 ]
+        symbol [ Props %tmp.6 40 30 35 ];
+        %tmp.6 = getm $.Toybox.Application.Properties;
+        symbol [ getValue %tmp.7 40 36 44 ];
+        %tmp.7 = getv function %tmp.6 :getValue;
         %tmp.8 = "swingThreshold";
         %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
         lputv %storedThreshold.1 %tmp.9;
-        symbol [ storedThreshold %storedThreshold.1 35 12 27 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 36 8 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_36_8_38_8_if_stmt:
-        %tmp.10 = lgetv %storedThreshold.1;
-        symbol [ storedThreshold %tmp.10 36 12 27 ];
-        %tmp.11 = null;
-        %tmp.12 = ne %tmp.10 %tmp.11;
-        bf %tmp.12 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_36_8_38_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_36_8_38_8_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_36_37_38_8_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 37 12 ]
-        %tmp.13 = lgetv %storedThreshold.1;
-        symbol [ storedThreshold %tmp.13 37 30 45 ];
-        %tmp.14 = as %tmp.13 { (!Null) };
-        symbol [ SWING_THRESHOLD ? 37 12 27 ];
-        putv self :SWING_THRESHOLD %tmp.14;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_36_37_38_8_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_36_8_38_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_36_8_38_8_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 41 8 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_31_26_47_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_31_26_47_4_stop" ]
-        %options.2 = local;
-        symbol [ options %options.2 41 12 19 ];
-        %tmp.15 = newd 3;
-        %tmp.17 = const :period;
-        symbol [ period %tmp.17 42 13 19 const ];
-        %tmp.18 = 1;
-        %tmp.19 = dup %tmp.15;
-        %tmp.20 = aputv %tmp.19 %tmp.17 %tmp.18;
-        %tmp.22 = const :sampleRate;
-        symbol [ sampleRate %tmp.22 43 13 23 const ];
-        %tmp.23 = 25;
-        %tmp.24 = dup %tmp.20;
-        %tmp.25 = aputv %tmp.24 %tmp.22 %tmp.23;
-        %tmp.27 = const :enableAccelerometer;
-        symbol [ enableAccelerometer %tmp.27 44 13 32 const ];
-        %tmp.28 = true;
-        %tmp.29 = dup %tmp.25;
-        %tmp.30 = aputv %tmp.29 %tmp.27 %tmp.28;
-        lputv %options.2 %tmp.30;
-        symbol [ options %options.2 41 12 19 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 46 8 ]
-        symbol [ Sensor %tmp.31 46 8 14 ];
-        %tmp.31 = getm $.Toybox.Sensor;
-        symbol [ registerSensorDataListener %tmp.32 46 15 41 ];
-        %tmp.32 = getv function %tmp.31 :registerSensorDataListener;
-        %tmp.33 = self;
-        symbol [ method %tmp.34 46 42 48 ];
-        %tmp.34 = getv function %tmp.33 :method;
-        %tmp.36 = const :onSensor;
-        symbol [ onSensor %tmp.36 46 50 58 const ];
-        %tmp.37 = invoke %tmp.33 %tmp.34(%tmp.36);
-        %tmp.38 = lgetv %options.2;
-        symbol [ options %tmp.38 46 61 68 ];
-        invoke %tmp.31 %tmp.32(%tmp.37, %tmp.38);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_31_26_47_4_stop:
+        symbol [ storedThreshold %storedThreshold.1 40 12 27 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_12_41_8_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_endTry:
+        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_finally;
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_catch:
+        %tmp.10 = exception;
+        push %tmp.10;
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 41 10 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_catch" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_41_10_43_8_end" ]
+        %e.2 = local;
+        symbol [ e %e.2 41 17 18 ];
+        %tmp.11 = dup %tmp.10;
+        lputv %e.2 %tmp.11;
+        symbol [ e %e.2 41 17 18 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_41_20_43_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 42 12 ]
+        symbol [ System %tmp.12 42 12 18 ];
+        %tmp.12 = getm $.Toybox.System;
+        symbol [ println %tmp.13 42 19 26 ];
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "Property not found, using default";
+        invoke %tmp.12 %tmp.13(%tmp.14);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_41_20_43_8_stop:
+        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_finally;
+        pop;
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_41_10_43_8_end:
+        try @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_catch @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_41_10_43_8_end @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_41_10_43_8_end @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_finally;
+        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_finally;
+        throw %tmp.10;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_finally:
+        jsrret;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_39_8_43_8_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 45 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_8_50_8_if_stmt:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_12_45_85_begin:
+        %tmp.15 = lgetv %storedThreshold.1;
+        symbol [ storedThreshold %tmp.15 45 12 27 ];
+        %tmp.16 = null;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        bf %tmp.17 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_8_50_8_if_false;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_39_45_85_true:
+        %tmp.18 = lgetv %storedThreshold.1;
+        symbol [ storedThreshold %tmp.18 45 40 55 ];
+        %tmp.19 = as %tmp.18 { (!Null) };
+        symbol [ Toybox %tmp.21 45 67 73 ];
+        %tmp.21 = getv ? :Toybox;
+        symbol [ Lang %tmp.22 45 74 78 ];
+        %tmp.22 = getv %tmp.21 :Lang;
+        symbol [ Number %tmp.23 45 79 85 ];
+        %tmp.23 = getv %tmp.22 :Number;
+        %tmp.24 = isa %tmp.19 %tmp.23;
+        push %tmp.24;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_39_45_85_end:
+        %tmp.25 = phi [%tmp.17 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_12_45_85_begin] [%tmp.24 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_39_45_85_true] [%tmp.25 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_39_45_85_end];
+        bf %tmp.25 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_8_50_8_if_false;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_8_50_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_88_47_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 46 12 ]
+        %tmp.26 = lgetv %storedThreshold.1;
+        symbol [ storedThreshold %tmp.26 46 30 45 ];
+        %tmp.27 = as %tmp.26 { (Toybox.Lang.Number) && (!Null) };
+        symbol [ SWING_THRESHOLD ? 46 12 27 ];
+        putv self :SWING_THRESHOLD %tmp.27;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_88_47_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_8_50_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_8_50_8_if_false:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 47 15 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_47_15_50_8_if_stmt:
+        %tmp.28 = lgetv %storedThreshold.1;
+        symbol [ storedThreshold %tmp.28 47 19 34 ];
+        %tmp.29 = as %tmp.28 { (!(!Null && Toybox.Lang.Number)) };
+        %tmp.30 = null;
+        %tmp.31 = ne %tmp.29 %tmp.30;
+        bf %tmp.31 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_47_15_50_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_47_15_50_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_47_44_50_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 49 12 ]
+        %tmp.32 = lgetv %storedThreshold.1;
+        symbol [ storedThreshold %tmp.32 49 30 45 ];
+        %tmp.33 = as %tmp.32 { (!(!Null && Toybox.Lang.Number)) && (!Null) };
+        symbol [ toNumber %tmp.34 49 46 54 ];
+        %tmp.34 = getv function %tmp.33 :toNumber;
+        %tmp.35 = invoke %tmp.33 %tmp.34();
+        symbol [ SWING_THRESHOLD ? 49 12 27 ];
+        putv self :SWING_THRESHOLD %tmp.35;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_47_44_50_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_47_15_50_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_47_15_50_8_if_end:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_45_8_50_8_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 53 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_33_26_59_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_33_26_59_4_stop" ]
+        %options.3 = local;
+        symbol [ options %options.3 53 12 19 ];
+        %tmp.36 = newd 3;
+        %tmp.38 = const :period;
+        symbol [ period %tmp.38 54 13 19 const ];
+        %tmp.39 = 1;
+        %tmp.40 = dup %tmp.36;
+        %tmp.41 = aputv %tmp.40 %tmp.38 %tmp.39;
+        %tmp.43 = const :sampleRate;
+        symbol [ sampleRate %tmp.43 55 13 23 const ];
+        %tmp.44 = 25;
+        %tmp.45 = dup %tmp.41;
+        %tmp.46 = aputv %tmp.45 %tmp.43 %tmp.44;
+        %tmp.48 = const :enableAccelerometer;
+        symbol [ enableAccelerometer %tmp.48 56 13 32 const ];
+        %tmp.49 = true;
+        %tmp.50 = dup %tmp.46;
+        %tmp.51 = aputv %tmp.50 %tmp.48 %tmp.49;
+        lputv %options.3 %tmp.51;
+        symbol [ options %options.3 53 12 19 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 58 8 ]
+        symbol [ Sensor %tmp.52 58 8 14 ];
+        %tmp.52 = getm $.Toybox.Sensor;
+        symbol [ registerSensorDataListener %tmp.53 58 15 41 ];
+        %tmp.53 = getv function %tmp.52 :registerSensorDataListener;
+        %tmp.54 = self;
+        symbol [ method %tmp.55 58 42 48 ];
+        %tmp.55 = getv function %tmp.54 :method;
+        %tmp.57 = const :onSensor;
+        symbol [ onSensor %tmp.57 58 50 58 const ];
+        %tmp.58 = invoke %tmp.54 %tmp.55(%tmp.57);
+        %tmp.59 = lgetv %options.3;
+        symbol [ options %tmp.59 58 61 68 ];
+        invoke %tmp.52 %tmp.53(%tmp.58, %tmp.59);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_33_26_59_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 50; @symbol_functiondef = [onKey,50,13,18]; @symbol_param<0> = [keyEvent,50,19,27]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 62; @symbol_functiondef = [onKey,62,13,18]; @symbol_param<0> = [keyEvent,62,19,27]; ]
     function onKey(keyEvent) {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_50_29_68_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 51 8 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_50_29_68_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_50_29_68_4_stop" ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_62_29_80_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 63 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_62_29_80_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_62_29_80_4_stop" ]
         %key.1 = local;
-        symbol [ key %key.1 51 12 15 ];
+        symbol [ key %key.1 63 12 15 ];
         %tmp.1 = lgetv %keyEvent;
-        symbol [ keyEvent %tmp.1 51 18 26 ];
-        symbol [ getKey %tmp.2 51 27 33 ];
+        symbol [ keyEvent %tmp.1 63 18 26 ];
+        symbol [ getKey %tmp.2 63 27 33 ];
         %tmp.2 = getv function %tmp.1 :getKey;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %key.1 %tmp.3;
-        symbol [ key %key.1 51 12 15 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 53 8 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_8_60_8_if_stmt:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_12_53_55_begin:
+        symbol [ key %key.1 63 12 15 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 65 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_8_72_8_if_stmt:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_12_65_55_begin:
         %tmp.4 = lgetv %key.1;
-        symbol [ key %tmp.4 53 12 15 ];
-        symbol [ WatchUi %tmp.5 53 19 26 ];
+        symbol [ key %tmp.4 65 12 15 ];
+        symbol [ WatchUi %tmp.5 65 19 26 ];
         %tmp.5 = getm $.Toybox.WatchUi;
-        symbol [ KEY_ENTER %tmp.6 53 27 36 ];
+        symbol [ KEY_ENTER %tmp.6 65 27 36 ];
         %tmp.6 = getv %tmp.5 :KEY_ENTER;
         %tmp.7 = eq %tmp.4 %tmp.6;
-        bt %tmp.7 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_8_60_8_if_true;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_40_53_55_false:
+        bt %tmp.7 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_8_72_8_if_true;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_40_65_55_false:
         %tmp.8 = lgetv %key.1;
-        symbol [ key %tmp.8 53 40 43 ];
-        symbol [ WatchUi %tmp.9 53 47 54 ];
+        symbol [ key %tmp.8 65 40 43 ];
+        symbol [ WatchUi %tmp.9 65 47 54 ];
         %tmp.9 = getm $.Toybox.WatchUi;
-        symbol [ KEY_START %tmp.10 53 55 64 ];
+        symbol [ KEY_START %tmp.10 65 55 64 ];
         %tmp.10 = getv %tmp.9 :KEY_START;
         %tmp.11 = eq %tmp.8 %tmp.10;
         push %tmp.11;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_40_53_55_end:
-        %tmp.12 = phi [%tmp.7 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_12_53_55_begin] [%tmp.11 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_40_53_55_false] [%tmp.12 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_40_53_55_end];
-        bf %tmp.12 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_8_60_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_8_60_8_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_66_60_8_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 54 12 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_54_12_58_12_if_stmt:
-        symbol [ isRecording %tmp.14 54 16 27 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_40_65_55_end:
+        %tmp.12 = phi [%tmp.7 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_12_65_55_begin] [%tmp.11 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_40_65_55_false] [%tmp.12 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_40_65_55_end];
+        bf %tmp.12 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_8_72_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_8_72_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_66_72_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 66 12 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_66_12_70_12_if_stmt:
+        symbol [ isRecording %tmp.14 66 16 27 ];
         %tmp.14 = getv ? :isRecording;
-        bf %tmp.14 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_54_12_58_12_if_else_false;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_54_12_58_12_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_54_29_56_12_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 55 16 ]
+        bf %tmp.14 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_66_12_70_12_if_else_false;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_66_12_70_12_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_66_29_68_12_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 67 16 ]
         %tmp.15 = self;
-        symbol [ stopRecording %tmp.16 55 16 29 ];
+        symbol [ stopRecording %tmp.16 67 16 29 ];
         %tmp.16 = getv function %tmp.15 :stopRecording;
         invoke %tmp.15 %tmp.16();
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_54_29_56_12_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_54_12_58_12_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_54_12_58_12_if_else_false:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_56_19_58_12_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 57 16 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_66_29_68_12_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_66_12_70_12_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_66_12_70_12_if_else_false:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_68_19_70_12_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 69 16 ]
         %tmp.17 = self;
-        symbol [ startRecording %tmp.18 57 16 30 ];
+        symbol [ startRecording %tmp.18 69 16 30 ];
         %tmp.18 = getv function %tmp.17 :startRecording;
         invoke %tmp.17 %tmp.18();
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_56_19_58_12_stop:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_54_12_58_12_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 59 12 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_68_19_70_12_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_66_12_70_12_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 71 12 ]
         %tmp.19 = true;
         ret %tmp.19;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_66_60_8_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_8_60_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_53_8_60_8_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 63 8 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_63_8_65_8_if_stmt:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_66_72_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_8_72_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_65_8_72_8_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 75 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_8_77_8_if_stmt:
         %tmp.20 = lgetv %key.1;
-        symbol [ key %tmp.20 63 12 15 ];
-        symbol [ WatchUi %tmp.21 63 19 26 ];
+        symbol [ key %tmp.20 75 12 15 ];
+        symbol [ WatchUi %tmp.21 75 19 26 ];
         %tmp.21 = getm $.Toybox.WatchUi;
-        symbol [ KEY_ESC %tmp.22 63 27 34 ];
+        symbol [ KEY_ESC %tmp.22 75 27 34 ];
         %tmp.22 = getv %tmp.21 :KEY_ESC;
         %tmp.23 = eq %tmp.20 %tmp.22;
-        bf %tmp.23 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_63_8_65_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_63_8_65_8_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_63_36_65_8_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 64 12 ]
+        bf %tmp.23 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_8_77_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_8_77_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_36_77_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 76 12 ]
         %tmp.24 = false;
         ret %tmp.24;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_63_36_65_8_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_63_8_65_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_63_8_65_8_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 67 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_36_77_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_8_77_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_8_77_8_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 79 8 ]
         %tmp.25 = false;
         ret %tmp.25;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_50_29_68_4_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_62_29_80_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 71; @symbol_functiondef = [onSwipe,71,13,20]; @symbol_param<0> = [swipeEvent,71,21,31]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 83; @symbol_functiondef = [onSwipe,83,13,20]; @symbol_param<0> = [swipeEvent,83,21,31]; ]
     function onSwipe(swipeEvent) {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_71_33_86_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 72 8 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_8_83_8_if_stmt:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_83_33_103_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 84 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_8_100_8_if_stmt:
         %tmp.1 = lgetv %swipeEvent;
-        symbol [ swipeEvent %tmp.1 72 12 22 ];
-        symbol [ getDirection %tmp.2 72 23 35 ];
+        symbol [ swipeEvent %tmp.1 84 12 22 ];
+        symbol [ getDirection %tmp.2 84 23 35 ];
         %tmp.2 = getv function %tmp.1 :getDirection;
         %tmp.3 = invoke %tmp.1 %tmp.2();
-        symbol [ WatchUi %tmp.4 72 41 48 ];
+        symbol [ WatchUi %tmp.4 84 41 48 ];
         %tmp.4 = getm $.Toybox.WatchUi;
-        symbol [ SWIPE_LEFT %tmp.5 72 49 59 ];
+        symbol [ SWIPE_LEFT %tmp.5 84 49 59 ];
         %tmp.5 = getv %tmp.4 :SWIPE_LEFT;
         %tmp.6 = eq %tmp.3 %tmp.5;
-        bf %tmp.6 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_8_83_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_8_83_8_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_61_83_8_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 73 12 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_61_83_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_61_83_8_stop" ]
+        bf %tmp.6 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_8_100_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_8_100_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_61_100_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 85 12 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_61_100_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_61_100_8_stop" ]
         %menu.1 = local;
-        symbol [ menu %menu.1 73 16 20 ];
-        symbol [ WatchUi %tmp.9 73 27 34 ];
+        symbol [ menu %menu.1 85 16 20 ];
+        symbol [ WatchUi %tmp.9 85 27 34 ];
         %tmp.9 = getm $.Toybox.WatchUi;
-        symbol [ Menu2 %tmp.10 73 35 40 ];
+        symbol [ Menu2 %tmp.10 85 35 40 ];
         %tmp.10 = getv function ? %tmp.9 :Menu2;
         %tmp.11 = newd 1;
         %tmp.13 = const :title;
-        symbol [ title %tmp.13 73 43 48 const ];
+        symbol [ title %tmp.13 85 43 48 const ];
         %tmp.14 = "Threshold";
         %tmp.15 = dup %tmp.11;
         %tmp.16 = aputv %tmp.15 %tmp.13 %tmp.14;
         %tmp.7 = newc %tmp.10 (%tmp.16);
         lputv %menu.1 %tmp.7;
-        symbol [ menu %menu.1 73 16 20 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 75 12 ]
-        for @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_test @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_incr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_init:
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_begin" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_end" ]
+        symbol [ menu %menu.1 85 16 20 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 87 12 ]
+        for @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_test @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_incr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_init:
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_begin" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_end" ]
         %i.2 = local;
-        symbol [ i %i.2 75 21 22 ];
-        %tmp.17 = 2000;
+        symbol [ i %i.2 87 21 22 ];
+        %tmp.17 = 1500;
         lputv %i.2 %tmp.17;
-        symbol [ i %i.2 75 21 22 ];
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_test:
+        symbol [ i %i.2 87 21 22 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_test:
         %tmp.18 = lgetv %i.2;
-        symbol [ i %tmp.18 75 31 32 ];
+        symbol [ i %tmp.18 87 31 32 ];
         %tmp.19 = 5000;
         %tmp.20 = lte %tmp.18 %tmp.19;
-        bf %tmp.20 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_begin:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_52_78_12_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 77 16 ]
-        %tmp.21 = lgetv %menu.1;
-        symbol [ menu %tmp.21 77 16 20 ];
-        symbol [ addItem %tmp.22 77 21 28 ];
-        %tmp.22 = getv function %tmp.21 :addItem;
-        symbol [ WatchUi %tmp.25 77 33 40 ];
-        %tmp.25 = getm $.Toybox.WatchUi;
-        symbol [ MenuItem %tmp.26 77 41 49 ];
-        %tmp.26 = getv function ? %tmp.25 :MenuItem;
-        %tmp.27 = lgetv %i.2;
-        symbol [ i %tmp.27 77 50 51 ];
-        symbol [ toString %tmp.28 77 52 60 ];
-        %tmp.28 = getv function %tmp.27 :toString;
-        %tmp.29 = invoke %tmp.27 %tmp.28();
-        %tmp.30 = null;
-        %tmp.31 = lgetv %i.2;
-        symbol [ i %tmp.31 77 70 71 ];
-        %tmp.32 = null;
-        %tmp.23 = newc %tmp.26 (%tmp.29, %tmp.30, %tmp.31, %tmp.32);
-        invoke %tmp.21 %tmp.22(%tmp.23);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_52_78_12_stop:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_incr:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 75 ]
+        bf %tmp.20 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_begin:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_52_95_12_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 88 16 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_52_95_12_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_52_95_12_stop" ]
+        %subLabel.3 = local;
+        symbol [ subLabel %subLabel.3 88 20 28 ];
+        %tmp.21 = null;
+        lputv %subLabel.3 %tmp.21;
+        symbol [ subLabel %subLabel.3 88 20 28 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 90 16 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_16_92_16_if_stmt:
+        %tmp.22 = lgetv %i.2;
+        symbol [ i %tmp.22 90 20 21 ];
+        symbol [ SWING_THRESHOLD %tmp.24 90 25 40 ];
+        %tmp.24 = getv ? :SWING_THRESHOLD;
+        %tmp.25 = eq %tmp.22 %tmp.24;
+        bf %tmp.25 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_16_92_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_16_92_16_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_42_92_16_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 91 20 ]
+        %tmp.26 = "Current";
+        lputv %subLabel.3 %tmp.26;
+        symbol [ subLabel %subLabel.3 91 20 28 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_42_92_16_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_16_92_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_16_92_16_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 94 16 ]
+        %tmp.27 = lgetv %menu.1;
+        symbol [ menu %tmp.27 94 16 20 ];
+        symbol [ addItem %tmp.28 94 21 28 ];
+        %tmp.28 = getv function %tmp.27 :addItem;
+        symbol [ WatchUi %tmp.31 94 33 40 ];
+        %tmp.31 = getm $.Toybox.WatchUi;
+        symbol [ MenuItem %tmp.32 94 41 49 ];
+        %tmp.32 = getv function ? %tmp.31 :MenuItem;
         %tmp.33 = lgetv %i.2;
-        symbol [ i %tmp.33 75 42 43 ];
-        %tmp.34 = 250;
-        %tmp.35 = add %tmp.33 %tmp.34;
-        lputv %i.2 %tmp.35;
-        symbol [ i %i.2 75 42 43 ];
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_test;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_75_12_78_12_for_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 80 12 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_61_83_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_61_83_8_stop" ]
-        %delegate.3 = local;
-        symbol [ delegate %delegate.3 80 16 24 ];
-        symbol [ ThresholdMenuDelegate %tmp.39 80 31 52 ];
-        %tmp.39 = getv ? :ThresholdMenuDelegate;
-        %tmp.40 = self;
-        symbol [ self %tmp.40 80 53 57 ];
-        %tmp.36 = newc %tmp.39 (%tmp.40);
-        lputv %delegate.3 %tmp.36;
-        symbol [ delegate %delegate.3 80 16 24 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 81 12 ]
-        symbol [ WatchUi %tmp.41 81 12 19 ];
-        %tmp.41 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.42 81 20 28 ];
-        %tmp.42 = getv function %tmp.41 :pushView;
-        %tmp.43 = lgetv %menu.1;
-        symbol [ menu %tmp.43 81 29 33 ];
-        %tmp.44 = lgetv %delegate.3;
-        symbol [ delegate %tmp.44 81 35 43 ];
-        symbol [ WatchUi %tmp.45 81 45 52 ];
-        %tmp.45 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_LEFT %tmp.46 81 53 63 ];
-        %tmp.46 = getv %tmp.45 :SLIDE_LEFT;
-        invoke %tmp.41 %tmp.42(%tmp.43, %tmp.44, %tmp.46);
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 82 12 ]
-        %tmp.47 = true;
-        ret %tmp.47;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_61_83_8_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_8_83_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_72_8_83_8_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 85 8 ]
-        %tmp.48 = false;
-        ret %tmp.48;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_71_33_86_4_stop:
+        symbol [ i %tmp.33 94 50 51 ];
+        symbol [ toString %tmp.34 94 52 60 ];
+        %tmp.34 = getv function %tmp.33 :toString;
+        %tmp.35 = invoke %tmp.33 %tmp.34();
+        %tmp.36 = lgetv %subLabel.3;
+        symbol [ subLabel %tmp.36 94 64 72 ];
+        %tmp.37 = lgetv %i.2;
+        symbol [ i %tmp.37 94 74 75 ];
+        %tmp.38 = null;
+        %tmp.29 = newc %tmp.32 (%tmp.35, %tmp.36, %tmp.37, %tmp.38);
+        invoke %tmp.27 %tmp.28(%tmp.29);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_52_95_12_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_incr:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 87 ]
+        %tmp.39 = lgetv %i.2;
+        symbol [ i %tmp.39 87 42 43 ];
+        %tmp.40 = 250;
+        %tmp.41 = add %tmp.39 %tmp.40;
+        lputv %i.2 %tmp.41;
+        symbol [ i %i.2 87 42 43 ];
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_test;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_87_12_95_12_for_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 97 12 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_61_100_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_61_100_8_stop" ]
+        %delegate.4 = local;
+        symbol [ delegate %delegate.4 97 16 24 ];
+        symbol [ ThresholdMenuDelegate %tmp.45 97 31 52 ];
+        %tmp.45 = getv ? :ThresholdMenuDelegate;
+        %tmp.46 = self;
+        symbol [ self %tmp.46 97 53 57 ];
+        %tmp.42 = newc %tmp.45 (%tmp.46);
+        lputv %delegate.4 %tmp.42;
+        symbol [ delegate %delegate.4 97 16 24 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 98 12 ]
+        symbol [ WatchUi %tmp.47 98 12 19 ];
+        %tmp.47 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.48 98 20 28 ];
+        %tmp.48 = getv function %tmp.47 :pushView;
+        %tmp.49 = lgetv %menu.1;
+        symbol [ menu %tmp.49 98 29 33 ];
+        %tmp.50 = lgetv %delegate.4;
+        symbol [ delegate %tmp.50 98 35 43 ];
+        symbol [ WatchUi %tmp.51 98 45 52 ];
+        %tmp.51 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_LEFT %tmp.52 98 53 63 ];
+        %tmp.52 = getv %tmp.51 :SLIDE_LEFT;
+        invoke %tmp.47 %tmp.48(%tmp.49, %tmp.50, %tmp.52);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 99 12 ]
+        %tmp.53 = true;
+        ret %tmp.53;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_61_100_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_8_100_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_84_8_100_8_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 102 8 ]
+        %tmp.54 = false;
+        ret %tmp.54;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_83_33_103_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 88; @symbol_functiondef = [startRecording,88,13,27]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 105; @symbol_functiondef = [onTap,105,13,18]; @symbol_param<0> = [clickEvent,105,19,29]; ]
+    function onTap(clickEvent) {
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_105_31_119_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 106 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_105_31_119_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_105_31_119_4_stop" ]
+        %coords.1 = local;
+        symbol [ coords %coords.1 106 12 18 ];
+        %tmp.1 = lgetv %clickEvent;
+        symbol [ clickEvent %tmp.1 106 21 31 ];
+        symbol [ getCoordinates %tmp.2 106 32 46 ];
+        %tmp.2 = getv function %tmp.1 :getCoordinates;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %coords.1 %tmp.3;
+        symbol [ coords %coords.1 106 12 18 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 107 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_105_31_119_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_105_31_119_4_stop" ]
+        %y.2 = local;
+        symbol [ y %y.2 107 12 13 ];
+        %tmp.4 = lgetv %coords.1;
+        symbol [ coords %tmp.4 107 16 22 ];
+        %tmp.5 = 1;
+        %tmp.6 = agetv %tmp.4 %tmp.5;
+        lputv %y.2 %tmp.6;
+        symbol [ y %y.2 107 12 13 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 110 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_110_8_117_8_if_stmt:
+        %tmp.7 = lgetv %y.2;
+        symbol [ y %tmp.7 110 12 13 ];
+        symbol [ System %tmp.8 110 17 23 ];
+        %tmp.8 = getm $.Toybox.System;
+        symbol [ getDeviceSettings %tmp.9 110 24 41 ];
+        %tmp.9 = getv function %tmp.8 :getDeviceSettings;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        symbol [ screenHeight %tmp.11 110 44 56 ];
+        %tmp.11 = getv %tmp.10 :screenHeight;
+        %tmp.12 = 0.70;
+        %tmp.13 = mul %tmp.11 %tmp.12;
+        %tmp.14 = gt %tmp.7 %tmp.13;
+        bf %tmp.14 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_110_8_117_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_110_8_117_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_110_66_117_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 111 12 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_12_115_12_if_stmt:
+        symbol [ isRecording %tmp.16 111 16 27 ];
+        %tmp.16 = getv ? :isRecording;
+        bf %tmp.16 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_12_115_12_if_else_false;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_12_115_12_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_29_113_12_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 112 16 ]
+        %tmp.17 = self;
+        symbol [ stopRecording %tmp.18 112 16 29 ];
+        %tmp.18 = getv function %tmp.17 :stopRecording;
+        invoke %tmp.17 %tmp.18();
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_29_113_12_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_12_115_12_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_12_115_12_if_else_false:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_113_19_115_12_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 114 16 ]
+        %tmp.19 = self;
+        symbol [ startRecording %tmp.20 114 16 30 ];
+        %tmp.20 = getv function %tmp.19 :startRecording;
+        invoke %tmp.19 %tmp.20();
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_113_19_115_12_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_12_115_12_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 116 12 ]
+        %tmp.21 = true;
+        ret %tmp.21;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_110_66_117_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_110_8_117_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_110_8_117_8_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 118 8 ]
+        %tmp.22 = false;
+        ret %tmp.22;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_105_31_119_4_stop:
+    }
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 121; @symbol_functiondef = [startRecording,121,13,27]; ]
     function startRecording() {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_88_30_122_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 89 8 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_89_8_121_8_if_stmt:
-        symbol [ Toybox %tmp.2 89 12 18 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_121_30_155_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 122 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_122_8_154_8_if_stmt:
+        symbol [ Toybox %tmp.2 122 12 18 ];
         %tmp.2 = getv ? :Toybox;
         %tmp.4 = const :ActivityRecording;
-        symbol [ ActivityRecording %tmp.4 89 24 41 const ];
+        symbol [ ActivityRecording %tmp.4 122 24 41 const ];
         %tmp.5 = canhazplz %tmp.2 %tmp.4;
-        bf %tmp.5 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_89_8_121_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_89_8_121_8_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_89_43_121_8_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 90 12 ]
-        try @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_beginTry @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_endTry @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_catch @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_finally;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_beginTry:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_16_118_12_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 92 16 ]
-        symbol [ ActivityRecording %tmp.6 92 26 43 ];
+        bf %tmp.5 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_122_8_154_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_122_8_154_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_122_43_154_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 123 12 ]
+        try @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_beginTry @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_endTry @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_catch @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_finally;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_beginTry:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_16_151_12_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 125 16 ]
+        symbol [ ActivityRecording %tmp.6 125 26 43 ];
         %tmp.6 = getm $.Toybox.ActivityRecording;
-        symbol [ createSession %tmp.7 92 44 57 ];
+        symbol [ createSession %tmp.7 125 44 57 ];
         %tmp.7 = getv function %tmp.6 :createSession;
         %tmp.8 = newd 3;
         %tmp.10 = const :name;
-        symbol [ name %tmp.10 93 21 25 const ];
+        symbol [ name %tmp.10 126 21 25 const ];
         %tmp.11 = "Golf Range";
         %tmp.12 = dup %tmp.8;
         %tmp.13 = aputv %tmp.12 %tmp.10 %tmp.11;
         %tmp.15 = const :sport;
-        symbol [ sport %tmp.15 94 21 26 const ];
-        symbol [ ActivityRecording %tmp.16 94 30 47 ];
+        symbol [ sport %tmp.15 127 21 26 const ];
+        symbol [ ActivityRecording %tmp.16 127 30 47 ];
         %tmp.16 = getm $.Toybox.ActivityRecording;
-        symbol [ SPORT_GOLF %tmp.17 94 48 58 ];
+        symbol [ SPORT_GOLF %tmp.17 127 48 58 ];
         %tmp.17 = getv %tmp.16 :SPORT_GOLF;
         %tmp.18 = dup %tmp.13;
         %tmp.19 = aputv %tmp.18 %tmp.15 %tmp.17;
         %tmp.21 = const :subSport;
-        symbol [ subSport %tmp.21 95 21 29 const ];
-        symbol [ ActivityRecording %tmp.22 95 33 50 ];
+        symbol [ subSport %tmp.21 128 21 29 const ];
+        symbol [ ActivityRecording %tmp.22 128 33 50 ];
         %tmp.22 = getm $.Toybox.ActivityRecording;
-        symbol [ SUB_SPORT_GENERIC %tmp.23 95 51 68 ];
+        symbol [ SUB_SPORT_GENERIC %tmp.23 128 51 68 ];
         %tmp.23 = getv %tmp.22 :SUB_SPORT_GENERIC;
         %tmp.24 = dup %tmp.19;
         %tmp.25 = aputv %tmp.24 %tmp.21 %tmp.23;
         %tmp.26 = invoke %tmp.6 %tmp.7(%tmp.25);
-        symbol [ session ? 92 16 23 ];
+        symbol [ session ? 125 16 23 ];
         putv self :session %tmp.26;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 99 16 ]
-        symbol [ session %tmp.28 99 35 42 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 132 16 ]
+        symbol [ session %tmp.28 132 35 42 ];
         %tmp.28 = getv ? :session;
-        symbol [ createField %tmp.29 99 43 54 ];
+        symbol [ createField %tmp.29 132 43 54 ];
         %tmp.29 = getv function %tmp.28 :createField;
         %tmp.30 = "swing_count";
-        symbol [ SWING_COUNT_FIELD_ID %tmp.32 99 70 90 ];
+        symbol [ SWING_COUNT_FIELD_ID %tmp.32 132 70 90 ];
         %tmp.32 = getv ? :SWING_COUNT_FIELD_ID;
-        symbol [ FitContributor %tmp.33 99 92 106 ];
+        symbol [ FitContributor %tmp.33 132 92 106 ];
         %tmp.33 = getm $.Toybox.FitContributor;
-        symbol [ DATA_TYPE_UINT16 %tmp.34 99 107 123 ];
+        symbol [ DATA_TYPE_UINT16 %tmp.34 132 107 123 ];
         %tmp.34 = getv %tmp.33 :DATA_TYPE_UINT16;
         %tmp.35 = newd 1;
         %tmp.37 = const :mesgType;
-        symbol [ mesgType %tmp.37 99 127 135 const ];
-        symbol [ FitContributor %tmp.38 99 139 153 ];
+        symbol [ mesgType %tmp.37 132 127 135 const ];
+        symbol [ FitContributor %tmp.38 132 139 153 ];
         %tmp.38 = getm $.Toybox.FitContributor;
-        symbol [ MESG_TYPE_SESSION %tmp.39 99 154 171 ];
+        symbol [ MESG_TYPE_SESSION %tmp.39 132 154 171 ];
         %tmp.39 = getv %tmp.38 :MESG_TYPE_SESSION;
         %tmp.40 = dup %tmp.35;
         %tmp.41 = aputv %tmp.40 %tmp.37 %tmp.39;
         %tmp.42 = invoke %tmp.28 %tmp.29(%tmp.30, %tmp.32, %tmp.34, %tmp.41);
-        symbol [ _swingCountField ? 99 16 32 ];
+        symbol [ _swingCountField ? 132 16 32 ];
         putv self :_swingCountField %tmp.42;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 102 16 ]
-        symbol [ session %tmp.44 102 35 42 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 135 16 ]
+        symbol [ session %tmp.44 135 35 42 ];
         %tmp.44 = getv ? :session;
-        symbol [ createField %tmp.45 102 43 54 ];
+        symbol [ createField %tmp.45 135 43 54 ];
         %tmp.45 = getv function %tmp.44 :createField;
         %tmp.46 = "swing_per_moment";
-        symbol [ SWING_GRAPH_FIELD_ID %tmp.48 102 75 95 ];
+        symbol [ SWING_GRAPH_FIELD_ID %tmp.48 135 75 95 ];
         %tmp.48 = getv ? :SWING_GRAPH_FIELD_ID;
-        symbol [ FitContributor %tmp.49 102 97 111 ];
+        symbol [ FitContributor %tmp.49 135 97 111 ];
         %tmp.49 = getm $.Toybox.FitContributor;
-        symbol [ DATA_TYPE_UINT16 %tmp.50 102 112 128 ];
+        symbol [ DATA_TYPE_UINT16 %tmp.50 135 112 128 ];
         %tmp.50 = getv %tmp.49 :DATA_TYPE_UINT16;
         %tmp.51 = newd 1;
         %tmp.53 = const :mesgType;
-        symbol [ mesgType %tmp.53 102 132 140 const ];
-        symbol [ FitContributor %tmp.54 102 144 158 ];
+        symbol [ mesgType %tmp.53 135 132 140 const ];
+        symbol [ FitContributor %tmp.54 135 144 158 ];
         %tmp.54 = getm $.Toybox.FitContributor;
-        symbol [ MESG_TYPE_RECORD %tmp.55 102 159 175 ];
+        symbol [ MESG_TYPE_RECORD %tmp.55 135 159 175 ];
         %tmp.55 = getv %tmp.54 :MESG_TYPE_RECORD;
         %tmp.56 = dup %tmp.51;
         %tmp.57 = aputv %tmp.56 %tmp.53 %tmp.55;
         %tmp.58 = invoke %tmp.44 %tmp.45(%tmp.46, %tmp.48, %tmp.50, %tmp.57);
-        symbol [ _swingGraphField ? 102 16 32 ];
+        symbol [ _swingGraphField ? 135 16 32 ];
         putv self :_swingGraphField %tmp.58;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 104 16 ]
-        symbol [ session %tmp.60 104 16 23 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 137 16 ]
+        symbol [ session %tmp.60 137 16 23 ];
         %tmp.60 = getv ? :session;
-        symbol [ start %tmp.61 104 24 29 ];
+        symbol [ start %tmp.61 137 24 29 ];
         %tmp.61 = getv function %tmp.60 :start;
         invoke %tmp.60 %tmp.61();
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 105 16 ]
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 138 16 ]
         %tmp.62 = true;
-        symbol [ isRecording ? 105 16 27 ];
+        symbol [ isRecording ? 138 16 27 ];
         putv self :isRecording %tmp.62;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 106 16 ]
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 139 16 ]
         %tmp.63 = 0;
-        symbol [ swingCount ? 106 16 26 ];
+        symbol [ swingCount ? 139 16 26 ];
         putv self :swingCount %tmp.63;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 107 16 ]
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 140 16 ]
         %tmp.64 = 0;
-        symbol [ lastSwingTime ? 107 16 29 ];
+        symbol [ lastSwingTime ? 140 16 29 ];
         putv self :lastSwingTime %tmp.64;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 108 16 ]
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 141 16 ]
         %tmp.65 = 0;
-        symbol [ totalDistance ? 108 16 29 ];
+        symbol [ totalDistance ? 141 16 29 ];
         putv self :totalDistance %tmp.65;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 111 16 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_16_114_16_if_stmt:
-        symbol [ Toybox %tmp.67 111 20 26 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 144 16 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_144_16_147_16_if_stmt:
+        symbol [ Toybox %tmp.67 144 20 26 ];
         %tmp.67 = getv ? :Toybox;
         %tmp.69 = const :Attention;
-        symbol [ Attention %tmp.69 111 32 41 const ];
+        symbol [ Attention %tmp.69 144 32 41 const ];
         %tmp.70 = canhazplz %tmp.67 %tmp.69;
-        bf %tmp.70 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_16_114_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_16_114_16_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_43_114_16_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 112 20 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_43_114_16_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_43_114_16_stop" ]
+        bf %tmp.70 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_144_16_147_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_144_16_147_16_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_144_43_147_16_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 145 20 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_144_43_147_16_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_144_43_147_16_stop" ]
         %vibeData.1 = local;
-        symbol [ vibeData %vibeData.1 112 24 32 ];
+        symbol [ vibeData %vibeData.1 145 24 32 ];
         %tmp.71 = newa 1;
-        symbol [ Attention %tmp.74 112 40 49 ];
+        symbol [ Attention %tmp.74 145 40 49 ];
         %tmp.74 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.75 112 50 61 ];
+        symbol [ VibeProfile %tmp.75 145 50 61 ];
         %tmp.75 = getv function ? %tmp.74 :VibeProfile;
         %tmp.76 = 30;
         %tmp.77 = 200;
@@ -479,766 +665,564 @@ C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_43_114_16_st
         %tmp.78 = dup %tmp.71;
         %tmp.79 = aputv %tmp.78 0 %tmp.72;
         lputv %vibeData.1 %tmp.79;
-        symbol [ vibeData %vibeData.1 112 24 32 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 113 20 ]
-        symbol [ Attention %tmp.80 113 20 29 ];
+        symbol [ vibeData %vibeData.1 145 24 32 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 146 20 ]
+        symbol [ Attention %tmp.80 146 20 29 ];
         %tmp.80 = getm $.Toybox.Attention;
-        symbol [ vibrate %tmp.81 113 30 37 ];
+        symbol [ vibrate %tmp.81 146 30 37 ];
         %tmp.81 = getv function %tmp.80 :vibrate;
         %tmp.82 = lgetv %vibeData.1;
-        symbol [ vibeData %tmp.82 113 38 46 ];
+        symbol [ vibeData %tmp.82 146 38 46 ];
         invoke %tmp.80 %tmp.81(%tmp.82);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_43_114_16_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_16_114_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_111_16_114_16_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 116 16 ]
-        symbol [ WatchUi %tmp.83 116 16 23 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_144_43_147_16_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_144_16_147_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_144_16_147_16_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 149 16 ]
+        symbol [ WatchUi %tmp.83 149 16 23 ];
         %tmp.83 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.84 116 24 37 ];
+        symbol [ requestUpdate %tmp.84 149 24 37 ];
         %tmp.84 = getv function %tmp.83 :requestUpdate;
         invoke %tmp.83 %tmp.84();
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 117 16 ]
-        symbol [ System %tmp.85 117 16 22 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 150 16 ]
+        symbol [ System %tmp.85 150 16 22 ];
         %tmp.85 = getm $.Toybox.System;
-        symbol [ println %tmp.86 117 23 30 ];
+        symbol [ println %tmp.86 150 23 30 ];
         %tmp.86 = getv function %tmp.85 :println;
         %tmp.87 = "Golf Range Session Started";
         invoke %tmp.85 %tmp.86(%tmp.87);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_16_118_12_stop:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_endTry:
-        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_finally;
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_catch:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_16_151_12_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_endTry:
+        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_finally;
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_catch:
         %tmp.88 = exception;
         push %tmp.88;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 118 14 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_catch" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_118_14_120_12_end" ]
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 151 14 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_catch" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_14_153_12_end" ]
         %e.2 = local;
-        symbol [ e %e.2 118 21 22 ];
+        symbol [ e %e.2 151 21 22 ];
         %tmp.89 = dup %tmp.88;
         lputv %e.2 %tmp.89;
-        symbol [ e %e.2 118 21 22 ];
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_118_24_120_12_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 119 16 ]
-        symbol [ System %tmp.90 119 16 22 ];
+        symbol [ e %e.2 151 21 22 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_24_153_12_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 152 16 ]
+        symbol [ System %tmp.90 152 16 22 ];
         %tmp.90 = getm $.Toybox.System;
-        symbol [ println %tmp.91 119 23 30 ];
+        symbol [ println %tmp.91 152 23 30 ];
         %tmp.91 = getv function %tmp.90 :println;
         %tmp.92 = "Error starting session: ";
         %tmp.93 = lgetv %e.2;
-        symbol [ e %tmp.93 119 60 61 ];
-        symbol [ getErrorMessage %tmp.94 119 62 77 ];
+        symbol [ e %tmp.93 152 60 61 ];
+        symbol [ getErrorMessage %tmp.94 152 62 77 ];
         %tmp.94 = getv function %tmp.93 :getErrorMessage;
         %tmp.95 = invoke %tmp.93 %tmp.94();
         %tmp.96 = add %tmp.92 %tmp.95;
         invoke %tmp.90 %tmp.91(%tmp.96);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_118_24_120_12_stop:
-        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_finally;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_24_153_12_stop:
+        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_finally;
         pop;
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_118_14_120_12_end:
-        try @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_catch @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_118_14_120_12_end @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_118_14_120_12_end @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_finally;
-        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_finally;
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_14_153_12_end:
+        try @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_catch @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_14_153_12_end @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_14_153_12_end @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_finally;
+        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_finally;
         throw %tmp.88;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_finally:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_finally:
         jsrret;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_90_12_120_12_end:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_89_43_121_8_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_89_8_121_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_89_8_121_8_if_end:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_88_30_122_4_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_123_12_153_12_end:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_122_43_154_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_122_8_154_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_122_8_154_8_if_end:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_121_30_155_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 124; @symbol_functiondef = [stopRecording,124,13,26]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 157; @symbol_functiondef = [stopRecording,157,13,26]; ]
     function stopRecording() {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_124_29_155_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 125 8 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_8_154_8_if_stmt:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_12_125_31_begin:
-        symbol [ session %tmp.2 125 12 19 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_157_29_171_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 158 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_8_170_8_if_stmt:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_12_158_31_begin:
+        symbol [ session %tmp.2 158 12 19 ];
         %tmp.2 = getv ? :session;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_8_154_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_31_125_31_true:
-        symbol [ isRecording %tmp.6 125 31 42 ];
+        bf %tmp.4 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_8_170_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_31_158_31_true:
+        symbol [ isRecording %tmp.6 158 31 42 ];
         %tmp.6 = getv ? :isRecording;
         push %tmp.6;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_31_125_31_end:
-        %tmp.7 = phi [%tmp.4 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_12_125_31_begin] [%tmp.6 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_31_125_31_true] [%tmp.7 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_31_125_31_end];
-        bf %tmp.7 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_8_154_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_8_154_8_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_44_154_8_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 126 12 ]
-        try @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_beginTry @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_endTry @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_catch @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_finally;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_beginTry:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_16_151_12_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 128 16 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_128_16_131_16_if_stmt:
-        symbol [ _swingCountField %tmp.9 128 20 36 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_31_158_31_end:
+        %tmp.7 = phi [%tmp.4 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_12_158_31_begin] [%tmp.6 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_31_158_31_true] [%tmp.7 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_31_158_31_end];
+        bf %tmp.7 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_8_170_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_8_170_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_44_170_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 160 12 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_160_12_162_12_if_stmt:
+        symbol [ _swingCountField %tmp.9 160 16 32 ];
         %tmp.9 = getv ? :_swingCountField;
         %tmp.10 = null;
         %tmp.11 = ne %tmp.9 %tmp.10;
-        bf %tmp.11 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_128_16_131_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_128_16_131_16_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_128_46_131_16_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 130 20 ]
-        symbol [ _swingCountField %tmp.13 130 20 36 ];
+        bf %tmp.11 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_160_12_162_12_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_160_12_162_12_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_160_42_162_12_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 161 16 ]
+        symbol [ _swingCountField %tmp.13 161 16 32 ];
         %tmp.13 = getv ? :_swingCountField;
         %tmp.14 = as %tmp.13 { (!Null) };
-        symbol [ setData %tmp.15 130 37 44 ];
+        symbol [ setData %tmp.15 161 33 40 ];
         %tmp.15 = getv function %tmp.14 :setData;
-        symbol [ swingCount %tmp.17 130 45 55 ];
+        symbol [ swingCount %tmp.17 161 41 51 ];
         %tmp.17 = getv ? :swingCount;
-        symbol [ toNumber %tmp.18 130 56 64 ];
-        %tmp.18 = getv function %tmp.17 :toNumber;
-        %tmp.19 = invoke %tmp.17 %tmp.18();
-        invoke %tmp.14 %tmp.15(%tmp.19);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_128_46_131_16_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_128_16_131_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_128_16_131_16_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 133 16 ]
-        symbol [ session %tmp.21 133 16 23 ];
-        %tmp.21 = getv ? :session;
-        symbol [ stop %tmp.22 133 24 28 ];
-        %tmp.22 = getv function %tmp.21 :stop;
-        invoke %tmp.21 %tmp.22();
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 134 16 ]
-        symbol [ System %tmp.23 134 16 22 ];
-        %tmp.23 = getm $.Toybox.System;
-        symbol [ println %tmp.24 134 23 30 ];
-        %tmp.24 = getv function %tmp.23 :println;
-        %tmp.25 = "Saving session with ";
-        symbol [ swingCount %tmp.27 134 56 66 ];
-        %tmp.27 = getv ? :swingCount;
-        %tmp.28 = add %tmp.25 %tmp.27;
-        %tmp.29 = " swings";
-        %tmp.30 = add %tmp.28 %tmp.29;
-        invoke %tmp.23 %tmp.24(%tmp.30);
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 135 16 ]
-        symbol [ session %tmp.32 135 16 23 ];
-        %tmp.32 = getv ? :session;
-        symbol [ save %tmp.33 135 24 28 ];
-        %tmp.33 = getv function %tmp.32 :save;
-        invoke %tmp.32 %tmp.33();
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 136 16 ]
-        %tmp.34 = null;
-        symbol [ session ? 136 16 23 ];
-        putv self :session %tmp.34;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 137 16 ]
-        %tmp.35 = false;
-        symbol [ isRecording ? 137 16 27 ];
-        putv self :isRecording %tmp.35;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 140 16 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_140_16_147_16_if_stmt:
-        symbol [ Toybox %tmp.37 140 20 26 ];
-        %tmp.37 = getv ? :Toybox;
-        %tmp.39 = const :Attention;
-        symbol [ Attention %tmp.39 140 32 41 const ];
-        %tmp.40 = canhazplz %tmp.37 %tmp.39;
-        bf %tmp.40 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_140_16_147_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_140_16_147_16_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_140_43_147_16_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 141 20 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_140_43_147_16_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_140_43_147_16_stop" ]
-        %vibeData.1 = local;
-        symbol [ vibeData %vibeData.1 141 24 32 ];
-        %tmp.41 = newa 3;
-        symbol [ Attention %tmp.44 142 28 37 ];
-        %tmp.44 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.45 142 38 49 ];
-        %tmp.45 = getv function ? %tmp.44 :VibeProfile;
-        %tmp.46 = 50;
-        %tmp.47 = 100;
-        %tmp.42 = newc %tmp.45 (%tmp.46, %tmp.47);
-        %tmp.48 = dup %tmp.41;
-        %tmp.49 = aputv %tmp.48 0 %tmp.42;
-        symbol [ Attention %tmp.52 143 28 37 ];
-        %tmp.52 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.53 143 38 49 ];
-        %tmp.53 = getv function ? %tmp.52 :VibeProfile;
-        %tmp.54 = 0;
-        %tmp.55 = 50;
-        %tmp.50 = newc %tmp.53 (%tmp.54, %tmp.55);
-        %tmp.56 = dup %tmp.49;
-        %tmp.57 = aputv %tmp.56 1 %tmp.50;
-        symbol [ Attention %tmp.60 144 28 37 ];
-        %tmp.60 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.61 144 38 49 ];
-        %tmp.61 = getv function ? %tmp.60 :VibeProfile;
-        %tmp.62 = 50;
-        %tmp.63 = 100;
-        %tmp.58 = newc %tmp.61 (%tmp.62, %tmp.63);
-        %tmp.64 = dup %tmp.57;
-        %tmp.65 = aputv %tmp.64 2 %tmp.58;
-        lputv %vibeData.1 %tmp.65;
-        symbol [ vibeData %vibeData.1 141 24 32 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 146 20 ]
-        symbol [ Attention %tmp.66 146 20 29 ];
-        %tmp.66 = getm $.Toybox.Attention;
-        symbol [ vibrate %tmp.67 146 30 37 ];
-        %tmp.67 = getv function %tmp.66 :vibrate;
-        %tmp.68 = lgetv %vibeData.1;
-        symbol [ vibeData %tmp.68 146 38 46 ];
-        invoke %tmp.66 %tmp.67(%tmp.68);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_140_43_147_16_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_140_16_147_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_140_16_147_16_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 149 16 ]
-        symbol [ WatchUi %tmp.69 149 16 23 ];
-        %tmp.69 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.70 149 24 37 ];
-        %tmp.70 = getv function %tmp.69 :requestUpdate;
-        invoke %tmp.69 %tmp.70();
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 150 16 ]
-        symbol [ System %tmp.71 150 16 22 ];
-        %tmp.71 = getm $.Toybox.System;
-        symbol [ println %tmp.72 150 23 30 ];
-        %tmp.72 = getv function %tmp.71 :println;
-        %tmp.73 = "Golf Range Session Saved. Total Swings: ";
-        symbol [ swingCount %tmp.75 150 76 86 ];
-        %tmp.75 = getv ? :swingCount;
-        %tmp.76 = add %tmp.73 %tmp.75;
-        invoke %tmp.71 %tmp.72(%tmp.76);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_16_151_12_stop:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_endTry:
-        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_finally;
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_catch:
-        %tmp.77 = exception;
-        push %tmp.77;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 151 14 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_catch" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_14_153_12_end" ]
-        %e.2 = local;
-        symbol [ e %e.2 151 21 22 ];
-        %tmp.78 = dup %tmp.77;
-        lputv %e.2 %tmp.78;
-        symbol [ e %e.2 151 21 22 ];
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_24_153_12_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 152 16 ]
-        symbol [ System %tmp.79 152 16 22 ];
-        %tmp.79 = getm $.Toybox.System;
-        symbol [ println %tmp.80 152 23 30 ];
-        %tmp.80 = getv function %tmp.79 :println;
-        %tmp.81 = "Error stopping session: ";
-        %tmp.82 = lgetv %e.2;
-        symbol [ e %tmp.82 152 60 61 ];
-        symbol [ getErrorMessage %tmp.83 152 62 77 ];
-        %tmp.83 = getv function %tmp.82 :getErrorMessage;
-        %tmp.84 = invoke %tmp.82 %tmp.83();
-        %tmp.85 = add %tmp.81 %tmp.84;
-        invoke %tmp.79 %tmp.80(%tmp.85);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_24_153_12_stop:
-        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_finally;
-        pop;
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_14_153_12_end:
-        try @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_catch @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_14_153_12_end @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_151_14_153_12_end @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_finally;
-        jsr @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_finally;
-        throw %tmp.77;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_finally:
-        jsrret;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_126_12_153_12_end:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_44_154_8_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_8_154_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_125_8_154_8_if_end:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_124_29_155_4_stop:
+        invoke %tmp.14 %tmp.15(%tmp.17);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_160_42_162_12_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_160_12_162_12_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_160_12_162_12_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 164 12 ]
+        symbol [ session %tmp.19 164 12 19 ];
+        %tmp.19 = getv ? :session;
+        symbol [ stop %tmp.20 164 20 24 ];
+        %tmp.20 = getv function %tmp.19 :stop;
+        invoke %tmp.19 %tmp.20();
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 166 12 ]
+        symbol [ session %tmp.22 166 12 19 ];
+        %tmp.22 = getv ? :session;
+        symbol [ save %tmp.23 166 20 24 ];
+        %tmp.23 = getv function %tmp.22 :save;
+        invoke %tmp.22 %tmp.23();
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 168 12 ]
+        %tmp.24 = false;
+        symbol [ isRecording ? 168 12 23 ];
+        putv self :isRecording %tmp.24;
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 169 12 ]
+        symbol [ WatchUi %tmp.25 169 12 19 ];
+        %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.26 169 20 33 ];
+        %tmp.26 = getv function %tmp.25 :requestUpdate;
+        invoke %tmp.25 %tmp.26();
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_44_170_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_8_170_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_8_170_8_if_end:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_157_29_171_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 158; @symbol_functiondef = [onSensor,158,13,21]; @symbol_param<0> = [sensorData,158,22,32]; @symbol_param<0>_type<0> = [Sensor,158,36,42]; @symbol_param<0>_type<1> = [SensorData,158,43,53]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 173; @symbol_functiondef = [onSensor,173,13,21]; @symbol_param<0> = [sensorData,173,22,32]; @symbol_param<0>_type<0> = [Sensor,173,36,42]; @symbol_param<0>_type<1> = [SensorData,173,43,53]; ]
     function onSensor(sensorData as Sensor.SensorData) as Void {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_63_203_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 159 8 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_159_8_159_36_if_stmt:
-        symbol [ isRecording %tmp.2 159 13 24 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_173_63_205_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 174 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_174_8_174_36_if_stmt:
+        symbol [ isRecording %tmp.2 174 13 24 ];
         %tmp.2 = getv ? :isRecording;
         %tmp.3 = not %tmp.2;
-        bf %tmp.3 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_159_8_159_36_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_159_8_159_36_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_159_26_159_36_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 159 28 ]
+        bf %tmp.3 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_174_8_174_36_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_174_8_174_36_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_174_26_174_36_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 174 28 ]
         ret ?;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_159_26_159_36_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_159_8_159_36_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_159_8_159_36_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 161 8 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_63_203_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_63_203_4_stop" ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_174_26_174_36_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_174_8_174_36_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_174_8_174_36_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 176 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_173_63_205_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_173_63_205_4_stop" ]
         %acc.1 = local;
-        symbol [ acc %acc.1 161 12 15 ];
+        symbol [ acc %acc.1 176 12 15 ];
         %tmp.4 = lgetv %sensorData;
-        symbol [ sensorData %tmp.4 161 18 28 ];
-        symbol [ accelerometerData %tmp.5 161 29 46 ];
+        symbol [ sensorData %tmp.4 176 18 28 ];
+        symbol [ accelerometerData %tmp.5 176 29 46 ];
         %tmp.5 = getv %tmp.4 :accelerometerData;
         lputv %acc.1 %tmp.5;
-        symbol [ acc %acc.1 161 12 15 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 162 8 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_8_202_8_if_stmt:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_12_162_70_begin:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_12_162_53_begin:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_12_162_36_begin:
+        symbol [ acc %acc.1 176 12 15 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 177 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_8_204_8_if_stmt:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_12_177_70_begin:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_12_177_53_begin:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_12_177_36_begin:
         %tmp.6 = lgetv %acc.1;
-        symbol [ acc %tmp.6 162 12 15 ];
+        symbol [ acc %tmp.6 177 12 15 ];
         %tmp.7 = null;
         %tmp.8 = ne %tmp.6 %tmp.7;
-        bf %tmp.8 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_8_202_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_27_162_36_true:
+        bf %tmp.8 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_8_204_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_27_177_36_true:
         %tmp.9 = lgetv %acc.1;
-        symbol [ acc %tmp.9 162 27 30 ];
+        symbol [ acc %tmp.9 177 27 30 ];
         %tmp.10 = as %tmp.9 { (!Null) };
-        symbol [ x %tmp.11 162 31 32 ];
+        symbol [ x %tmp.11 177 31 32 ];
         %tmp.11 = getv %tmp.10 :x;
         %tmp.12 = null;
         %tmp.13 = ne %tmp.11 %tmp.12;
         push %tmp.13;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_27_162_36_end:
-        %tmp.14 = phi [%tmp.8 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_12_162_36_begin] [%tmp.13 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_27_162_36_true] [%tmp.14 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_27_162_36_end];
-        bf %tmp.14 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_8_202_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_44_162_53_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_27_177_36_end:
+        %tmp.14 = phi [%tmp.8 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_12_177_36_begin] [%tmp.13 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_27_177_36_true] [%tmp.14 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_27_177_36_end];
+        bf %tmp.14 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_8_204_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_44_177_53_true:
         %tmp.15 = lgetv %acc.1;
-        symbol [ acc %tmp.15 162 44 47 ];
+        symbol [ acc %tmp.15 177 44 47 ];
         %tmp.16 = as %tmp.15 { (!Null) };
-        symbol [ y %tmp.17 162 48 49 ];
+        symbol [ y %tmp.17 177 48 49 ];
         %tmp.17 = getv %tmp.16 :y;
         %tmp.18 = null;
         %tmp.19 = ne %tmp.17 %tmp.18;
         push %tmp.19;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_44_162_53_end:
-        %tmp.20 = phi [%tmp.14 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_12_162_53_begin] [%tmp.19 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_44_162_53_true] [%tmp.20 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_44_162_53_end];
-        bf %tmp.20 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_8_202_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_61_162_70_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_44_177_53_end:
+        %tmp.20 = phi [%tmp.14 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_12_177_53_begin] [%tmp.19 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_44_177_53_true] [%tmp.20 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_44_177_53_end];
+        bf %tmp.20 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_8_204_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_61_177_70_true:
         %tmp.21 = lgetv %acc.1;
-        symbol [ acc %tmp.21 162 61 64 ];
+        symbol [ acc %tmp.21 177 61 64 ];
         %tmp.22 = as %tmp.21 { (!Null) };
-        symbol [ z %tmp.23 162 65 66 ];
+        symbol [ z %tmp.23 177 65 66 ];
         %tmp.23 = getv %tmp.22 :z;
         %tmp.24 = null;
         %tmp.25 = ne %tmp.23 %tmp.24;
         push %tmp.25;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_61_162_70_end:
-        %tmp.26 = phi [%tmp.20 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_12_162_70_begin] [%tmp.25 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_61_162_70_true] [%tmp.26 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_61_162_70_end];
-        bf %tmp.26 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_8_202_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_8_202_8_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 163 12 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_stop" ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_61_177_70_end:
+        %tmp.26 = phi [%tmp.20 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_12_177_70_begin] [%tmp.25 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_61_177_70_true] [%tmp.26 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_61_177_70_end];
+        bf %tmp.26 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_8_204_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_8_204_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 178 12 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_stop" ]
         %x.2 = local;
-        symbol [ x %x.2 163 16 17 ];
+        symbol [ x %x.2 178 16 17 ];
         %tmp.27 = lgetv %acc.1;
-        symbol [ acc %tmp.27 163 20 23 ];
+        symbol [ acc %tmp.27 178 20 23 ];
         %tmp.28 = as %tmp.27 { (!Null) };
-        symbol [ x %tmp.29 163 24 25 ];
+        symbol [ x %tmp.29 178 24 25 ];
         %tmp.29 = getv %tmp.28 :x;
         %tmp.30 = 0;
         %tmp.31 = agetv %tmp.29 %tmp.30;
         lputv %x.2 %tmp.31;
-        symbol [ x %x.2 163 16 17 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 164 12 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_stop" ]
+        symbol [ x %x.2 178 16 17 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 179 12 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_stop" ]
         %y.3 = local;
-        symbol [ y %y.3 164 16 17 ];
+        symbol [ y %y.3 179 16 17 ];
         %tmp.32 = lgetv %acc.1;
-        symbol [ acc %tmp.32 164 20 23 ];
+        symbol [ acc %tmp.32 179 20 23 ];
         %tmp.33 = as %tmp.32 { (!Null) };
-        symbol [ y %tmp.34 164 24 25 ];
+        symbol [ y %tmp.34 179 24 25 ];
         %tmp.34 = getv %tmp.33 :y;
         %tmp.35 = 0;
         %tmp.36 = agetv %tmp.34 %tmp.35;
         lputv %y.3 %tmp.36;
-        symbol [ y %y.3 164 16 17 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 165 12 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_stop" ]
+        symbol [ y %y.3 179 16 17 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 180 12 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_stop" ]
         %z.4 = local;
-        symbol [ z %z.4 165 16 17 ];
+        symbol [ z %z.4 180 16 17 ];
         %tmp.37 = lgetv %acc.1;
-        symbol [ acc %tmp.37 165 20 23 ];
+        symbol [ acc %tmp.37 180 20 23 ];
         %tmp.38 = as %tmp.37 { (!Null) };
-        symbol [ z %tmp.39 165 24 25 ];
+        symbol [ z %tmp.39 180 24 25 ];
         %tmp.39 = getv %tmp.38 :z;
         %tmp.40 = 0;
         %tmp.41 = agetv %tmp.39 %tmp.40;
         lputv %z.4 %tmp.41;
-        symbol [ z %z.4 165 16 17 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 168 12 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_stop" ]
+        symbol [ z %z.4 180 16 17 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 182 12 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_stop" ]
         %magnitude.5 = local;
-        symbol [ magnitude %magnitude.5 168 16 25 ];
-        symbol [ Math %tmp.42 168 28 32 ];
+        symbol [ magnitude %magnitude.5 182 16 25 ];
+        symbol [ Math %tmp.42 182 28 32 ];
         %tmp.42 = getm $.Toybox.Math;
-        symbol [ sqrt %tmp.43 168 33 37 ];
+        symbol [ sqrt %tmp.43 182 33 37 ];
         %tmp.43 = getv function %tmp.42 :sqrt;
         %tmp.44 = lgetv %x.2;
-        symbol [ x %tmp.44 168 39 40 ];
+        symbol [ x %tmp.44 182 39 40 ];
         %tmp.45 = lgetv %x.2;
-        symbol [ x %tmp.45 168 41 42 ];
+        symbol [ x %tmp.45 182 41 42 ];
         %tmp.46 = mul %tmp.44 %tmp.45;
         %tmp.47 = lgetv %y.3;
-        symbol [ y %tmp.47 168 47 48 ];
+        symbol [ y %tmp.47 182 47 48 ];
         %tmp.48 = lgetv %y.3;
-        symbol [ y %tmp.48 168 49 50 ];
+        symbol [ y %tmp.48 182 49 50 ];
         %tmp.49 = mul %tmp.47 %tmp.48;
         %tmp.50 = add %tmp.46 %tmp.49;
         %tmp.51 = lgetv %z.4;
-        symbol [ z %tmp.51 168 55 56 ];
+        symbol [ z %tmp.51 182 55 56 ];
         %tmp.52 = lgetv %z.4;
-        symbol [ z %tmp.52 168 57 58 ];
+        symbol [ z %tmp.52 182 57 58 ];
         %tmp.53 = mul %tmp.51 %tmp.52;
         %tmp.54 = add %tmp.50 %tmp.53;
         %tmp.55 = invoke %tmp.42 %tmp.43(%tmp.54);
-        symbol [ toNumber %tmp.56 168 61 69 ];
+        symbol [ toNumber %tmp.56 182 61 69 ];
         %tmp.56 = getv function %tmp.55 :toNumber;
         %tmp.57 = invoke %tmp.55 %tmp.56();
         lputv %magnitude.5 %tmp.57;
-        symbol [ magnitude %magnitude.5 168 16 25 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 171 12 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_stop" ]
+        symbol [ magnitude %magnitude.5 182 16 25 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 183 12 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_stop" ]
         %now.6 = local;
-        symbol [ now %now.6 171 16 19 ];
-        symbol [ System %tmp.58 171 22 28 ];
+        symbol [ now %now.6 183 16 19 ];
+        symbol [ System %tmp.58 183 22 28 ];
         %tmp.58 = getm $.Toybox.System;
-        symbol [ getTimer %tmp.59 171 29 37 ];
+        symbol [ getTimer %tmp.59 183 29 37 ];
         %tmp.59 = getv function %tmp.58 :getTimer;
         %tmp.60 = invoke %tmp.58 %tmp.59();
         lputv %now.6 %tmp.60;
-        symbol [ now %now.6 171 16 19 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 172 12 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_12_201_12_if_stmt:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_16_172_93_begin:
+        symbol [ now %now.6 183 16 19 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 185 12 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_12_203_12_if_stmt:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_16_185_93_begin:
         %tmp.61 = lgetv %magnitude.5;
-        symbol [ magnitude %tmp.61 172 16 25 ];
-        symbol [ SWING_THRESHOLD %tmp.63 172 28 43 ];
+        symbol [ magnitude %tmp.61 185 16 25 ];
+        symbol [ SWING_THRESHOLD %tmp.63 185 28 43 ];
         %tmp.63 = getv ? :SWING_THRESHOLD;
         %tmp.64 = gt %tmp.61 %tmp.63;
-        bf %tmp.64 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_12_201_12_if_else_false;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_47_172_93_true:
+        bf %tmp.64 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_12_203_12_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_47_185_93_true:
         %tmp.65 = lgetv %now.6;
-        symbol [ now %tmp.65 172 48 51 ];
-        symbol [ lastSwingTime %tmp.67 172 54 67 ];
+        symbol [ now %tmp.65 185 48 51 ];
+        symbol [ lastSwingTime %tmp.67 185 54 67 ];
         %tmp.67 = getv ? :lastSwingTime;
         %tmp.68 = sub %tmp.65 %tmp.67;
-        symbol [ MIN_TIME_BETWEEN_SWINGS %tmp.70 172 70 93 ];
+        symbol [ MIN_TIME_BETWEEN_SWINGS %tmp.70 185 70 93 ];
         %tmp.70 = getv ? :MIN_TIME_BETWEEN_SWINGS;
         %tmp.71 = gt %tmp.68 %tmp.70;
         push %tmp.71;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_47_172_93_end:
-        %tmp.72 = phi [%tmp.64 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_16_172_93_begin] [%tmp.71 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_47_172_93_true] [%tmp.72 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_47_172_93_end];
-        bf %tmp.72 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_12_201_12_if_else_false;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_12_201_12_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_96_190_12_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 173 16 ]
-        symbol [ swingCount %tmp.75 173 16 26 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_47_185_93_end:
+        %tmp.72 = phi [%tmp.64 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_16_185_93_begin] [%tmp.71 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_47_185_93_true] [%tmp.72 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_47_185_93_end];
+        bf %tmp.72 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_12_203_12_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_12_203_12_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_96_203_12_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 186 16 ]
+        symbol [ swingCount %tmp.75 186 16 26 ];
         %tmp.75 = getv ? :swingCount;
         %tmp.76 = add %tmp.75 1;
-        symbol [ swingCount ? 173 16 26 ];
+        symbol [ swingCount ? 186 16 26 ];
         putv self :swingCount dup %tmp.76;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 174 16 ]
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 187 16 ]
         %tmp.77 = lgetv %now.6;
-        symbol [ now %tmp.77 174 32 35 ];
-        symbol [ lastSwingTime ? 174 16 29 ];
+        symbol [ now %tmp.77 187 32 35 ];
+        symbol [ lastSwingTime ? 187 16 29 ];
         putv self :lastSwingTime %tmp.77;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 177 16 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_16_179_16_if_stmt:
-        symbol [ _swingGraphField %tmp.79 177 20 36 ];
-        %tmp.79 = getv ? :_swingGraphField;
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 190 16 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_190_16_192_16_if_stmt:
+        symbol [ _swingCountField %tmp.79 190 20 36 ];
+        %tmp.79 = getv ? :_swingCountField;
         %tmp.80 = null;
         %tmp.81 = ne %tmp.79 %tmp.80;
-        bf %tmp.81 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_16_179_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_16_179_16_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_46_179_16_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 178 20 ]
-        symbol [ _swingGraphField %tmp.83 178 20 36 ];
-        %tmp.83 = getv ? :_swingGraphField;
+        bf %tmp.81 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_190_16_192_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_190_16_192_16_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_190_46_192_16_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 191 20 ]
+        symbol [ _swingCountField %tmp.83 191 20 36 ];
+        %tmp.83 = getv ? :_swingCountField;
         %tmp.84 = as %tmp.83 { (!Null) };
-        symbol [ setData %tmp.85 178 37 44 ];
+        symbol [ setData %tmp.85 191 37 44 ];
         %tmp.85 = getv function %tmp.84 :setData;
-        %tmp.86 = 1;
-        invoke %tmp.84 %tmp.85(%tmp.86);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_46_179_16_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_16_179_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_16_179_16_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 180 16 ]
-        %tmp.87 = lgetv %now.6;
-        symbol [ now %tmp.87 180 33 36 ];
-        symbol [ lastUpdateTime ? 180 16 30 ];
-        putv self :lastUpdateTime %tmp.87;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 183 16 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_183_16_186_16_if_stmt:
-        symbol [ Toybox %tmp.89 183 20 26 ];
-        %tmp.89 = getv ? :Toybox;
-        %tmp.91 = const :Attention;
-        symbol [ Attention %tmp.91 183 32 41 const ];
-        %tmp.92 = canhazplz %tmp.89 %tmp.91;
-        bf %tmp.92 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_183_16_186_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_183_16_186_16_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_183_43_186_16_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 184 20 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_183_43_186_16_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_183_43_186_16_stop" ]
+        symbol [ swingCount %tmp.87 191 45 55 ];
+        %tmp.87 = getv ? :swingCount;
+        invoke %tmp.84 %tmp.85(%tmp.87);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_190_46_192_16_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_190_16_192_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_190_16_192_16_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 193 16 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_193_16_195_16_if_stmt:
+        symbol [ _swingGraphField %tmp.89 193 20 36 ];
+        %tmp.89 = getv ? :_swingGraphField;
+        %tmp.90 = null;
+        %tmp.91 = ne %tmp.89 %tmp.90;
+        bf %tmp.91 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_193_16_195_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_193_16_195_16_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_193_46_195_16_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 194 20 ]
+        symbol [ _swingGraphField %tmp.93 194 20 36 ];
+        %tmp.93 = getv ? :_swingGraphField;
+        %tmp.94 = as %tmp.93 { (!Null) };
+        symbol [ setData %tmp.95 194 37 44 ];
+        %tmp.95 = getv function %tmp.94 :setData;
+        %tmp.96 = 1;
+        invoke %tmp.94 %tmp.95(%tmp.96);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_193_46_195_16_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_193_16_195_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_193_16_195_16_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 197 16 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_197_16_200_16_if_stmt:
+        symbol [ Toybox %tmp.98 197 20 26 ];
+        %tmp.98 = getv ? :Toybox;
+        %tmp.100 = const :Attention;
+        symbol [ Attention %tmp.100 197 32 41 const ];
+        %tmp.101 = canhazplz %tmp.98 %tmp.100;
+        bf %tmp.101 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_197_16_200_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_197_16_200_16_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_197_43_200_16_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 198 20 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_197_43_200_16_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_197_43_200_16_stop" ]
         %vibeData.7 = local;
-        symbol [ vibeData %vibeData.7 184 24 32 ];
-        %tmp.93 = newa 1;
-        symbol [ Attention %tmp.96 184 40 49 ];
-        %tmp.96 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.97 184 50 61 ];
-        %tmp.97 = getv function ? %tmp.96 :VibeProfile;
-        %tmp.98 = 20;
-        %tmp.99 = 50;
-        %tmp.94 = newc %tmp.97 (%tmp.98, %tmp.99);
-        %tmp.100 = dup %tmp.93;
-        %tmp.101 = aputv %tmp.100 0 %tmp.94;
-        lputv %vibeData.7 %tmp.101;
-        symbol [ vibeData %vibeData.7 184 24 32 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 185 20 ]
-        symbol [ Attention %tmp.102 185 20 29 ];
-        %tmp.102 = getm $.Toybox.Attention;
-        symbol [ vibrate %tmp.103 185 30 37 ];
-        %tmp.103 = getv function %tmp.102 :vibrate;
-        %tmp.104 = lgetv %vibeData.7;
-        symbol [ vibeData %tmp.104 185 38 46 ];
-        invoke %tmp.102 %tmp.103(%tmp.104);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_183_43_186_16_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_183_16_186_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_183_16_186_16_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 188 16 ]
-        symbol [ WatchUi %tmp.105 188 16 23 ];
-        %tmp.105 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.106 188 24 37 ];
-        %tmp.106 = getv function %tmp.105 :requestUpdate;
-        invoke %tmp.105 %tmp.106();
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 189 16 ]
-        symbol [ System %tmp.107 189 16 22 ];
-        %tmp.107 = getm $.Toybox.System;
-        symbol [ println %tmp.108 189 23 30 ];
-        %tmp.108 = getv function %tmp.107 :println;
-        %tmp.109 = "Swing detected! Total: ";
-        symbol [ swingCount %tmp.111 189 59 69 ];
-        %tmp.111 = getv ? :swingCount;
-        %tmp.112 = add %tmp.109 %tmp.111;
-        %tmp.113 = " (magnitude: ";
-        %tmp.114 = add %tmp.112 %tmp.113;
-        %tmp.115 = lgetv %magnitude.5;
-        symbol [ magnitude %tmp.115 189 90 99 ];
-        %tmp.116 = add %tmp.114 %tmp.115;
-        %tmp.117 = ")";
-        %tmp.118 = add %tmp.116 %tmp.117;
-        invoke %tmp.107 %tmp.108(%tmp.118);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_96_190_12_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_12_201_12_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_12_201_12_if_else_false:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_190_19_201_12_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 191 16 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_16_200_16_if_stmt:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_20_191_97_begin:
-        %tmp.119 = lgetv %magnitude.5;
-        symbol [ magnitude %tmp.119 191 20 29 ];
-        symbol [ SWING_THRESHOLD %tmp.121 191 32 47 ];
-        %tmp.121 = getv ? :SWING_THRESHOLD;
-        %tmp.122 = gt %tmp.119 %tmp.121;
-        bf %tmp.122 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_16_200_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_51_191_97_true:
-        %tmp.123 = lgetv %now.6;
-        symbol [ now %tmp.123 191 52 55 ];
-        symbol [ lastSwingTime %tmp.125 191 58 71 ];
-        %tmp.125 = getv ? :lastSwingTime;
-        %tmp.126 = sub %tmp.123 %tmp.125;
-        symbol [ MIN_TIME_BETWEEN_SWINGS %tmp.128 191 74 97 ];
-        %tmp.128 = getv ? :MIN_TIME_BETWEEN_SWINGS;
-        %tmp.129 = gt %tmp.126 %tmp.128;
-        push %tmp.129;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_51_191_97_end:
-        %tmp.130 = phi [%tmp.122 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_20_191_97_begin] [%tmp.129 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_51_191_97_true] [%tmp.130 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_51_191_97_end];
-        bf %tmp.130 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_16_200_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_16_200_16_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_100_200_16_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 192 20 ]
-        symbol [ swingCount %tmp.133 192 20 30 ];
-        %tmp.133 = getv ? :swingCount;
-        %tmp.134 = add %tmp.133 1;
-        symbol [ swingCount ? 192 20 30 ];
-        putv self :swingCount dup %tmp.134;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 193 20 ]
-        %tmp.135 = lgetv %now.6;
-        symbol [ now %tmp.135 193 36 39 ];
-        symbol [ lastSwingTime ? 193 20 33 ];
-        putv self :lastSwingTime %tmp.135;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 196 20 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_196_20_198_20_if_stmt:
-        symbol [ _swingGraphField %tmp.137 196 24 40 ];
-        %tmp.137 = getv ? :_swingGraphField;
-        %tmp.138 = null;
-        %tmp.139 = ne %tmp.137 %tmp.138;
-        bf %tmp.139 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_196_20_198_20_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_196_20_198_20_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_196_50_198_20_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 197 24 ]
-        symbol [ _swingGraphField %tmp.141 197 24 40 ];
-        %tmp.141 = getv ? :_swingGraphField;
-        %tmp.142 = as %tmp.141 { (!Null) };
-        symbol [ setData %tmp.143 197 41 48 ];
-        %tmp.143 = getv function %tmp.142 :setData;
-        %tmp.144 = 1;
-        invoke %tmp.142 %tmp.143(%tmp.144);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_196_50_198_20_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_196_20_198_20_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_196_20_198_20_if_end:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_100_200_16_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_16_200_16_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_191_16_200_16_if_end:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_190_19_201_12_stop:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_172_12_201_12_if_end:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_76_202_8_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_8_202_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_162_8_202_8_if_end:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_158_63_203_4_stop:
+        symbol [ vibeData %vibeData.7 198 24 32 ];
+        %tmp.102 = newa 1;
+        symbol [ Attention %tmp.105 198 40 49 ];
+        %tmp.105 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.106 198 50 61 ];
+        %tmp.106 = getv function ? %tmp.105 :VibeProfile;
+        %tmp.107 = 20;
+        %tmp.108 = 50;
+        %tmp.103 = newc %tmp.106 (%tmp.107, %tmp.108);
+        %tmp.109 = dup %tmp.102;
+        %tmp.110 = aputv %tmp.109 0 %tmp.103;
+        lputv %vibeData.7 %tmp.110;
+        symbol [ vibeData %vibeData.7 198 24 32 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 199 20 ]
+        symbol [ Attention %tmp.111 199 20 29 ];
+        %tmp.111 = getm $.Toybox.Attention;
+        symbol [ vibrate %tmp.112 199 30 37 ];
+        %tmp.112 = getv function %tmp.111 :vibrate;
+        %tmp.113 = lgetv %vibeData.7;
+        symbol [ vibeData %tmp.113 199 38 46 ];
+        invoke %tmp.111 %tmp.112(%tmp.113);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_197_43_200_16_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_197_16_200_16_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_197_16_200_16_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 202 16 ]
+        symbol [ WatchUi %tmp.114 202 16 23 ];
+        %tmp.114 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.115 202 24 37 ];
+        %tmp.115 = getv function %tmp.114 :requestUpdate;
+        invoke %tmp.114 %tmp.115();
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_96_203_12_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_12_203_12_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_185_12_203_12_if_end:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_76_204_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_8_204_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_177_8_204_8_if_end:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_173_63_205_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 206; @symbol_functiondef = [getSwingCount,206,13,26]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 208; @symbol_functiondef = [getSwingCount,208,13,26]; ]
     function getSwingCount() {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_206_29_208_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 207 8 ]
-        symbol [ swingCount %tmp.2 207 15 25 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_208_29_210_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 209 8 ]
+        symbol [ swingCount %tmp.2 209 15 25 ];
         %tmp.2 = getv ? :swingCount;
         ret %tmp.2;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_206_29_208_4_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_208_29_210_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 210; @symbol_functiondef = [getIsRecording,210,13,27]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 212; @symbol_functiondef = [getIsRecording,212,13,27]; ]
     function getIsRecording() {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_210_30_212_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 211 8 ]
-        symbol [ isRecording %tmp.2 211 15 26 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_212_30_214_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 213 8 ]
+        symbol [ isRecording %tmp.2 213 15 26 ];
         %tmp.2 = getv ? :isRecording;
         ret %tmp.2;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_210_30_212_4_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_212_30_214_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 214; @symbol_functiondef = [getTotalDistance,214,13,29]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 216; @symbol_functiondef = [getTotalDistance,216,13,29]; ]
     function getTotalDistance() {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_214_32_216_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 215 8 ]
-        symbol [ totalDistance %tmp.2 215 15 28 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_216_32_218_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 217 8 ]
+        symbol [ totalDistance %tmp.2 217 15 28 ];
         %tmp.2 = getv ? :totalDistance;
         ret %tmp.2;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_214_32_216_4_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_216_32_218_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 219; @symbol_functiondef = [setSwingThreshold,219,13,30]; @symbol_param<0> = [newThreshold,219,31,43]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 221; @symbol_functiondef = [setSwingThreshold,221,13,30]; @symbol_param<0> = [newThreshold,221,31,43]; ]
     function setSwingThreshold(newThreshold) {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_219_45_223_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 220 8 ]
-        %tmp.1 = lgetv %newThreshold;
-        symbol [ newThreshold %tmp.1 220 26 38 ];
-        symbol [ SWING_THRESHOLD ? 220 8 23 ];
-        putv self :SWING_THRESHOLD %tmp.1;
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 221 8 ]
-        symbol [ Application %tmp.2 221 8 19 ];
-        %tmp.2 = getm $.Toybox.Application;
-        symbol [ getApp %tmp.3 221 20 26 ];
-        %tmp.3 = getv function %tmp.2 :getApp;
-        %tmp.4 = invoke %tmp.2 %tmp.3();
-        symbol [ setProperty %tmp.5 221 29 40 ];
-        %tmp.5 = getv function %tmp.4 :setProperty;
-        %tmp.6 = "swingThreshold";
-        %tmp.7 = lgetv %newThreshold;
-        symbol [ newThreshold %tmp.7 221 59 71 ];
-        invoke %tmp.4 %tmp.5(%tmp.6, %tmp.7);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_221_45_225_4_start:
 [ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 222 8 ]
-        symbol [ System %tmp.8 222 8 14 ];
-        %tmp.8 = getm $.Toybox.System;
-        symbol [ println %tmp.9 222 15 22 ];
-        %tmp.9 = getv function %tmp.8 :println;
-        %tmp.10 = "New Swing Threshold set to: ";
-        %tmp.11 = lgetv %newThreshold;
-        symbol [ newThreshold %tmp.11 222 56 68 ];
-        %tmp.12 = add %tmp.10 %tmp.11;
-        invoke %tmp.8 %tmp.9(%tmp.12);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_219_45_223_4_stop:
+        %tmp.1 = lgetv %newThreshold;
+        symbol [ newThreshold %tmp.1 222 26 38 ];
+        symbol [ SWING_THRESHOLD ? 222 8 23 ];
+        putv self :SWING_THRESHOLD %tmp.1;
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 224 8 ]
+        symbol [ Props %tmp.2 224 8 13 ];
+        %tmp.2 = getm $.Toybox.Application.Properties;
+        symbol [ setValue %tmp.3 224 14 22 ];
+        %tmp.3 = getv function %tmp.2 :setValue;
+        %tmp.4 = "swingThreshold";
+        %tmp.5 = lgetv %newThreshold;
+        symbol [ newThreshold %tmp.5 224 41 53 ];
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_221_45_225_4_stop:
     }
 }
-[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 228; @symbol_classdef = [ThresholdMenuDelegate,228,6,27]; @symbol_extends<0> = [WatchUi,228,36,43]; @symbol_extends<1> = [Menu2InputDelegate,228,44,62]; ]
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 230; @symbol_classdef = [ThresholdMenuDelegate,230,6,27]; @symbol_extends<0> = [WatchUi,230,36,43]; @symbol_extends<1> = [Menu2InputDelegate,230,44,62]; ]
 class ThresholdMenuDelegate extends WatchUi.Menu2InputDelegate {
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 228; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 230; ]
     <init> {
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 228; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 230; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 229; @position = 8; @symbol_vardef = [_mainDelegate,229,8,21]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 231; @position = 8; @symbol_vardef = [_mainDelegate,231,8,21]; ]
     var _mainDelegate;
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 231; @symbol_functiondef = [initialize,231,13,23]; @symbol_param<0> = [mainDelegate,231,24,36]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 233; @symbol_functiondef = [initialize,233,13,23]; @symbol_param<0> = [mainDelegate,233,24,36]; ]
     function initialize(mainDelegate) as Void {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_231_38_234_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 232 8 ]
-        symbol [ Menu2InputDelegate %tmp.2 232 8 26 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_233_38_236_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 234 8 ]
+        symbol [ Menu2InputDelegate %tmp.2 234 8 26 ];
         %tmp.2 = getv ? :Menu2InputDelegate;
-        symbol [ initialize %tmp.3 232 27 37 ];
+        symbol [ initialize %tmp.3 234 27 37 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 233 8 ]
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 235 8 ]
         %tmp.4 = lgetv %mainDelegate;
-        symbol [ mainDelegate %tmp.4 233 24 36 ];
-        symbol [ _mainDelegate ? 233 8 21 ];
+        symbol [ mainDelegate %tmp.4 235 24 36 ];
+        symbol [ _mainDelegate ? 235 8 21 ];
         putv self :_mainDelegate %tmp.4;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_231_38_234_4_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_233_38_236_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 236; @symbol_functiondef = [onSelect,236,13,21]; @symbol_param<0> = [item,236,22,26]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 238; @symbol_functiondef = [onSelect,238,13,21]; @symbol_param<0> = [item,238,22,26]; ]
     function onSelect(item) {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_236_28_243_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 237 8 ]
-        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_236_28_243_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_236_28_243_4_stop" ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_28_245_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 239 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_28_245_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_28_245_4_stop" ]
         %id.1 = local;
-        symbol [ id %id.1 237 12 14 ];
+        symbol [ id %id.1 239 12 14 ];
         %tmp.1 = lgetv %item;
-        symbol [ item %tmp.1 237 17 21 ];
-        symbol [ getId %tmp.2 237 22 27 ];
+        symbol [ item %tmp.1 239 17 21 ];
+        symbol [ getId %tmp.2 239 22 27 ];
         %tmp.2 = getv function %tmp.1 :getId;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %id.1 %tmp.3;
-        symbol [ id %id.1 237 12 14 ];
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 238 8 ]
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_8_241_8_if_stmt:
+        symbol [ id %id.1 239 12 14 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 240 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_240_8_243_8_if_stmt:
         %tmp.4 = lgetv %id.1;
-        symbol [ id %tmp.4 238 12 14 ];
+        symbol [ id %tmp.4 240 12 14 ];
         %tmp.5 = null;
         %tmp.6 = ne %tmp.4 %tmp.5;
-        bf %tmp.6 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_8_241_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_8_241_8_if_true:
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_24_241_8_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 240 12 ]
-        symbol [ _mainDelegate %tmp.8 240 12 25 ];
+        bf %tmp.6 @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_240_8_243_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_240_8_243_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_240_24_243_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 242 12 ]
+        symbol [ _mainDelegate %tmp.8 242 12 25 ];
         %tmp.8 = getv ? :_mainDelegate;
-        symbol [ setSwingThreshold %tmp.9 240 26 43 ];
+        symbol [ setSwingThreshold %tmp.9 242 26 43 ];
         %tmp.9 = getv function %tmp.8 :setSwingThreshold;
         %tmp.10 = lgetv %id.1;
-        symbol [ id %tmp.10 240 44 46 ];
+        symbol [ id %tmp.10 242 44 46 ];
         %tmp.11 = as %tmp.10 { (!Null) };
         %tmp.12 = as %tmp.11 Toybox.Lang.Number;
-        symbol [ Toybox %tmp.12 240 50 56 ];
-        symbol [ Lang %tmp.12 240 57 61 ];
-        symbol [ Number %tmp.12 240 62 68 ];
+        symbol [ Toybox %tmp.12 242 50 56 ];
+        symbol [ Lang %tmp.12 242 57 61 ];
+        symbol [ Number %tmp.12 242 62 68 ];
         invoke %tmp.8 %tmp.9(%tmp.12);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_24_241_8_stop:
-        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_8_241_8_if_end;
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_8_241_8_if_end:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 242 8 ]
-        symbol [ WatchUi %tmp.13 242 8 15 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_240_24_243_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_240_8_243_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_240_8_243_8_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 244 8 ]
+        symbol [ WatchUi %tmp.13 244 8 15 ];
         %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.14 242 16 23 ];
+        symbol [ popView %tmp.14 244 16 23 ];
         %tmp.14 = getv function %tmp.13 :popView;
-        symbol [ WatchUi %tmp.15 242 24 31 ];
+        symbol [ WatchUi %tmp.15 244 24 31 ];
         %tmp.15 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_RIGHT %tmp.16 242 32 43 ];
+        symbol [ SLIDE_RIGHT %tmp.16 244 32 43 ];
         %tmp.16 = getv %tmp.15 :SLIDE_RIGHT;
         invoke %tmp.13 %tmp.14(%tmp.16);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_236_28_243_4_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_238_28_245_4_stop:
     }
-    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 245; @symbol_functiondef = [onBack,245,13,19]; ]
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 247; @symbol_functiondef = [onBack,247,13,19]; ]
     function onBack() {
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_245_22_247_4_start:
-[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 246 8 ]
-        symbol [ WatchUi %tmp.1 246 8 15 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_247_22_249_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc" 248 8 ]
+        symbol [ WatchUi %tmp.1 248 8 15 ];
         %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.2 246 16 23 ];
+        symbol [ popView %tmp.2 248 16 23 ];
         %tmp.2 = getv function %tmp.1 :popView;
-        symbol [ WatchUi %tmp.3 246 24 31 ];
+        symbol [ WatchUi %tmp.3 248 24 31 ];
         %tmp.3 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_RIGHT %tmp.4 246 32 43 ];
+        symbol [ SLIDE_RIGHT %tmp.4 248 32 43 ];
         %tmp.4 = getv %tmp.3 :SLIDE_RIGHT;
         invoke %tmp.1 %tmp.2(%tmp.4);
-C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_245_22_247_4_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeDelegate_mc_247_22_249_4_stop:
     }
 }
 [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeDelegate.mc"; @line = 1; ]

@@ -1,72 +1,84 @@
 using Toybox.WatchUi;
 using Toybox.Graphics;
-using Toybox.System;
+using Toybox.Activity;
+using Toybox.Lang;
 
 class GolfRangeView extends WatchUi.View {
 
-    var delegate;
+    private var _delegate;
+    private var _screenHeight;
+    private var _screenWidth;
+    private var _isRound;
 
     function initialize() {
         View.initialize();
-        delegate = null;
     }
 
+    // Passiamo il delegate per accedere ai dati degli swing
     function setDelegate(del) {
-        delegate = del;
+        _delegate = del;
+    }
+
+    // Ottimizzazione: carichiamo le dimensioni dello schermo solo una volta
+    function onLayout(dc) {
+        _screenHeight = dc.getHeight();
+        _screenWidth = dc.getWidth();
     }
 
     function onUpdate(dc) {
-        // Pulisci lo schermo
+        // 1. Reset dello sfondo
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
-        // Colore testo bianco
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-
-        var width = dc.getWidth();
-        var height = dc.getHeight();
+        // 2. Recupero dati (Swing dal delegate, Calorie dal sistema)
+        var swingCount = (_delegate != null) ? _delegate.getSwingCount() : 0;
+        var isRecording = (_delegate != null) ? _delegate.getIsRecording() : false;
         
-        // Ottieni i dati dal delegate
-        var swingCount = (delegate != null) ? delegate.getSwingCount() : 0;
-        var isRecording = (delegate != null) ? delegate.getIsRecording() : false;
+        var info = Activity.getActivityInfo();
+        var calories = (info != null && info.calories != null) ? info.calories : 0;
 
-        // Titolo in alto
-        dc.drawText(width/2, 10, Graphics.FONT_SMALL, "GOLF RANGE", Graphics.TEXT_JUSTIFY_CENTER);
-
-        // Separatore
-        dc.drawLine(10, 30, width - 10, 30);
-
-        // Stato registrazione
-        var statusText = isRecording ? "● RECORDING" : "STOPPED";
+        // --- DISEGNO INTERFACCIA ---
+        // Indicatore di Stato (Pallino colorato + Testo)
         var statusColor = isRecording ? Graphics.COLOR_GREEN : Graphics.COLOR_RED;
         dc.setColor(statusColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(width/2, 40, Graphics.FONT_TINY, statusText, Graphics.TEXT_JUSTIFY_CENTER);
+        var statusText = isRecording ? "RECORDING" : "STOPPED";
+        dc.drawText(_screenWidth / 2, _screenHeight * 0.12, Graphics.FONT_XTINY, statusText, Graphics.TEXT_JUSTIFY_CENTER);
 
-        // Ritorna al colore bianco
+        // --- SEZIONE CENTRALE: SWINGS ---
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(_screenWidth / 2, _screenHeight * 0.20, Graphics.FONT_NUMBER_HOT, swingCount.toString(), Graphics.TEXT_JUSTIFY_CENTER);
+        
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(_screenWidth / 2, _screenHeight * 0.48, Graphics.FONT_TINY, "SWINGS", Graphics.TEXT_JUSTIFY_CENTER);
 
-        // Contatore Swing - GRANDE al centro
-        var swingCountStr = swingCount.toString();
-        dc.drawText(width/2, height/2 - 30, Graphics.FONT_NUMBER_HOT, swingCountStr, Graphics.TEXT_JUSTIFY_CENTER);
+        // --- SEZIONE INFERIORE: CALORIE ---
+        // Linea decorativa sottile
+        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawLine(_screenWidth * 0.2, _screenHeight * 0.60, _screenWidth * 0.8, _screenHeight * 0.60);
 
-        // Etichetta "Swings"
-        dc.drawText(width/2, height/2 + 20, Graphics.FONT_MEDIUM, "SWINGS", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(_screenWidth / 2, _screenHeight * 0.64, Graphics.FONT_SMALL, calories.toString() + " kcal", Graphics.TEXT_JUSTIFY_CENTER);
 
-        // Separatore
-        dc.drawLine(10, height - 45, width - 10, height - 45);
+        var btnWidth = _screenWidth;
+        var btnHeight = _screenHeight*0.20;
+        var btnX = (_screenWidth - btnWidth) / 2;
+        var btnY = _screenHeight * 0.80; // Posizionato sopra il fondo per visibilità
 
-        // Istruzioni in basso
         if (isRecording) {
-            dc.drawText(width/2, height - 35, Graphics.FONT_XTINY, "Press START to Stop", Graphics.TEXT_JUSTIFY_CENTER);
+            // Bottone ROSSO per STOP
+            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+            dc.fillRoundedRectangle(btnX, btnY, btnWidth, btnHeight, 8);
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(_screenWidth / 2, btnY + (btnHeight / 2), Graphics.FONT_TINY, "STOP", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         } else {
-            dc.drawText(width/2, height - 35, Graphics.FONT_XTINY, "Press START to Begin", Graphics.TEXT_JUSTIFY_CENTER);
+            // Bottone VERDE per START
+            dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
+            dc.fillRoundedRectangle(btnX, btnY, btnWidth, btnHeight, 8);
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT); // Testo nero su verde per contrasto
+            dc.drawText(_screenWidth / 2, btnY + (btnHeight / 2), Graphics.FONT_TINY, "START", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
-
-        // Info aggiuntiva in basso a sinistra
-        dc.drawText(5, height - 20, Graphics.FONT_XTINY, "v1.0.0", Graphics.TEXT_JUSTIFY_LEFT);
     }
 
     function onHide() {
     }
-
 }
