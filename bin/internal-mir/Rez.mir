@@ -26,9 +26,11 @@ module Rez {
         [ @file = "c:\Users\fraio\Documents\garmingolf\bin\gen\006-B2700-00\source\Rez.mcgen"; @line = 12; ]
         <init> {
         }
-        [ @file = "c:\Users\fraio\Documents\garmingolf\bin\gen\006-B2700-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [AppDescription,13,27,41]; @symbol_type<0> = [ResourceId,13,45,55]; ]
-        var AppDescription as ResourceId;
-        [ @file = "c:\Users\fraio\Documents\garmingolf\bin\gen\006-B2700-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; @symbol_vardef = [AppName,14,27,34]; @symbol_type<0> = [ResourceId,14,38,48]; ]
+        [ @file = "c:\Users\fraio\Documents\garmingolf\bin\gen\006-B2700-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [label_swings,13,27,39]; @symbol_type<0> = [ResourceId,13,43,53]; ]
+        var label_swings as ResourceId;
+        [ @file = "c:\Users\fraio\Documents\garmingolf\bin\gen\006-B2700-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; @symbol_vardef = [units_swings,14,27,39]; @symbol_type<0> = [ResourceId,14,43,53]; ]
+        var units_swings as ResourceId;
+        [ @file = "c:\Users\fraio\Documents\garmingolf\bin\gen\006-B2700-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; @symbol_vardef = [AppName,15,27,34]; @symbol_type<0> = [ResourceId,15,38,48]; ]
         var AppName as ResourceId;
     }
 }

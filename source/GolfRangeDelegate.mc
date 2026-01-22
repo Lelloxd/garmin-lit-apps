@@ -3,6 +3,7 @@ using Toybox.System;
 using Toybox.Application;
 using Toybox.ActivityRecording;
 using Toybox.Sensor;
+using Toybox.FitContributor;
 using Toybox.Math;
 using Toybox.Attention;
 
@@ -12,13 +13,20 @@ class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
     var swingCount = 0;
     var isRecording = false;
     var totalDistance = 0;
+
+    // Campi FIT per il conteggio swing
+    const SWING_COUNT_FIELD_ID = 0;
+    var _swingCountField = null;
     
     // Variabili per il rilevamento dello swing
     var lastSwingTime = 0;
     var lastUpdateTime = 0;
 
     var SWING_THRESHOLD = 5000; // Valore di default
-    const MIN_TIME_BETWEEN_SWINGS = 3000; // Millisecondi tra uno swing e l'altro
+    const MIN_TIME_BETWEEN_SWINGS = 1500; // Millisecondi tra uno swing e l'altro
+
+    const SWING_GRAPH_FIELD_ID = 1;      // Grafico nel tempo
+    var _swingGraphField = null;
 
     function initialize() {
         BehaviorDelegate.initialize();
@@ -63,8 +71,8 @@ class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
     function onSwipe(swipeEvent) {
         if (swipeEvent.getDirection() == WatchUi.SWIPE_LEFT) {
             var menu = new WatchUi.Menu2({:title=>"Threshold"});
-            // Aggiunge le opzioni da 3000 a 15000
-            for (var i = 3000; i <= 15000; i += 1000) {
+            // Aggiunge le opzioni da 2000 a 5000
+            for (var i = 2000; i <= 5000; i += 250) {
                 // L'ID dell'item sarà il valore stesso della soglia
                 menu.addItem(new WatchUi.MenuItem(i.toString(), null, i, null));
             }
@@ -86,6 +94,13 @@ class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
                     :sport => ActivityRecording.SPORT_GOLF,
                     :subSport => ActivityRecording.SUB_SPORT_GENERIC
                 });
+
+                // 1. Campo Sessione (Totale finale)
+                _swingCountField = session.createField("swing_count", SWING_COUNT_FIELD_ID, FitContributor.DATA_TYPE_UINT16, {:mesgType => FitContributor.MESG_TYPE_SESSION});
+                
+                // 2. Campo Record (Grafico)
+                _swingGraphField = session.createField("swing_per_moment", SWING_GRAPH_FIELD_ID, FitContributor.DATA_TYPE_UINT16, {:mesgType => FitContributor.MESG_TYPE_RECORD});
+
                 session.start();
                 isRecording = true;
                 swingCount = 0; // Reset contatore
@@ -109,8 +124,15 @@ class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
     function stopRecording() {
         if (session != null && isRecording) {
             try {
+                // Imposta il valore finale del conteggio swing prima di salvare
+                if (_swingCountField != null) {
+                    // Assicurati che il dato sia passato come Number
+                    _swingCountField.setData(swingCount.toNumber());
+                }
+
                 session.stop();
-                session.save(); // Salva e chiude, calcolando calorie ecc.
+                System.println("Saving session with " + swingCount + " swings");
+                session.save(); 
                 session = null;
                 isRecording = false;
 
@@ -150,6 +172,11 @@ class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
             if (magnitude > SWING_THRESHOLD && (now - lastSwingTime > MIN_TIME_BETWEEN_SWINGS)) {
                 swingCount++;
                 lastSwingTime = now;
+
+                // Aggiorna il grafico: segniamo che in questo momento c'è stato uno swing
+                if (_swingGraphField != null) {
+                    _swingGraphField.setData(1); 
+                }
                 lastUpdateTime = now;
 
                 // Feedback vibrazione (swing rilevato)
@@ -160,6 +187,17 @@ class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
 
                 WatchUi.requestUpdate(); // Aggiorna lo schermo
                 System.println("Swing detected! Total: " + swingCount + " (magnitude: " + magnitude + ")");
+            } else {
+                if (magnitude > SWING_THRESHOLD && (now - lastSwingTime > MIN_TIME_BETWEEN_SWINGS)) {
+                    swingCount++;
+                    lastSwingTime = now;
+
+                    // Aggiorna il grafico: segniamo che in questo momento c'è stato uno swing
+                    if (_swingGraphField != null) {
+                        _swingGraphField.setData(1); 
+                    }   
+                
+                }
             }
         }
     }

@@ -10,7 +10,8 @@ module Rez {
     } // Drawables
 
     module Strings {
-        (:initialized) var AppDescription as ResourceId;
+        (:initialized) var label_swings as ResourceId;
+        (:initialized) var units_swings as ResourceId;
         (:initialized) var AppName as ResourceId;
     } // Strings
 } // Rez

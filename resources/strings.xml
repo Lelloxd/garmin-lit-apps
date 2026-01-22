@@ -1,4 +1,6 @@
-<strings>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <string id="AppName">Golf Range</string>
-    <string id="AppDescription">Track your golf swings at the range using accelerometer detection.</string>
-</strings>
+    <string id="label_swings">Total Swings</string>
+    <string id="units_swings">swings</string>
+</resources>
