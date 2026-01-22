@@ -1,0 +1,18 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.defaultFormatter": null,
+        "editor.formatOnSave": false,
+        "files.exclude": {
+            "**/bin": false,
+            "**/.git": true
+        },
+        "search.exclude": {
+            "**/bin": true
+        }
+    }
+}

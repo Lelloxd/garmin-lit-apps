@@ -1,0 +1,446 @@
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [System,3,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 5; @symbol_classdef = [GolfRangeView,5,6,19]; @symbol_extends<0> = [WatchUi,5,28,35]; @symbol_extends<1> = [View,5,36,40]; ]
+class GolfRangeView extends WatchUi.View {
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 7; @position = 8; @symbol_vardef = [delegate,7,8,16]; ]
+    var delegate;
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; ]
+    function initialize() as Void {
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_9_26_12_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 10 8 ]
+        symbol [ View %tmp.2 10 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 10 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 11 8 ]
+        %tmp.4 = null;
+        symbol [ delegate ? 11 8 16 ];
+        putv self :delegate %tmp.4;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_9_26_12_4_stop:
+    }
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 14; @symbol_functiondef = [setDelegate,14,13,24]; @symbol_param<0> = [del,14,25,28]; ]
+    function setDelegate(del) {
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_14_30_16_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 15 8 ]
+        %tmp.1 = lgetv %del;
+        symbol [ del %tmp.1 15 19 22 ];
+        symbol [ delegate ? 15 8 16 ];
+        putv self :delegate %tmp.1;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_14_30_16_4_stop:
+    }
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 18; @symbol_functiondef = [onUpdate,18,13,21]; @symbol_param<0> = [dc,18,22,24]; ]
+    function onUpdate(dc) {
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 20 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 20 8 10 ];
+        symbol [ setColor %tmp.2 20 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 20 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 20 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 20 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 20 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 21 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 21 8 10 ];
+        symbol [ clear %tmp.8 21 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 24 8 ]
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 24 8 10 ];
+        symbol [ setColor %tmp.10 24 11 19 ];
+        %tmp.10 = getv function %tmp.9 :setColor;
+        symbol [ Graphics %tmp.11 24 20 28 ];
+        %tmp.11 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.12 24 29 40 ];
+        %tmp.12 = getv %tmp.11 :COLOR_WHITE;
+        symbol [ Graphics %tmp.13 24 42 50 ];
+        %tmp.13 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.14 24 51 68 ];
+        %tmp.14 = getv %tmp.13 :COLOR_TRANSPARENT;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 26 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 26 12 17 ];
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 26 20 22 ];
+        symbol [ getWidth %tmp.16 26 23 31 ];
+        %tmp.16 = getv function %tmp.15 :getWidth;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        lputv %width.1 %tmp.17;
+        symbol [ width %width.1 26 12 17 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 27 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 27 12 18 ];
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 27 21 23 ];
+        symbol [ getHeight %tmp.19 27 24 33 ];
+        %tmp.19 = getv function %tmp.18 :getHeight;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        lputv %height.2 %tmp.20;
+        symbol [ height %height.2 27 12 18 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 30 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_stop" ]
+        %swingCount.3 = local;
+        symbol [ swingCount %swingCount.3 30 12 22 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_begin:
+        symbol [ delegate %tmp.22 30 26 34 ];
+        %tmp.22 = getv ? :delegate;
+        %tmp.23 = null;
+        %tmp.24 = ne %tmp.22 %tmp.23;
+        bf %tmp.24 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_else_false;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_true:
+        symbol [ delegate %tmp.26 30 46 54 ];
+        %tmp.26 = getv ? :delegate;
+        %tmp.27 = as %tmp.26 { (!Null) };
+        symbol [ getSwingCount %tmp.28 30 55 68 ];
+        %tmp.28 = getv function %tmp.27 :getSwingCount;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        push %tmp.29;
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_else_false:
+        %tmp.30 = 0;
+        push %tmp.30;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_end:
+        %tmp.31 = phi [%tmp.24 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_begin] [%tmp.29 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_true] [%tmp.30 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_else_false] [%tmp.31 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_30_25_30_73_end];
+        lputv %swingCount.3 %tmp.31;
+        symbol [ swingCount %swingCount.3 30 12 22 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 31 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_stop" ]
+        %isRecording.4 = local;
+        symbol [ isRecording %isRecording.4 31 12 23 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_begin:
+        symbol [ delegate %tmp.33 31 27 35 ];
+        %tmp.33 = getv ? :delegate;
+        %tmp.34 = null;
+        %tmp.35 = ne %tmp.33 %tmp.34;
+        bf %tmp.35 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_else_false;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_true:
+        symbol [ delegate %tmp.37 31 47 55 ];
+        %tmp.37 = getv ? :delegate;
+        %tmp.38 = as %tmp.37 { (!Null) };
+        symbol [ getIsRecording %tmp.39 31 56 70 ];
+        %tmp.39 = getv function %tmp.38 :getIsRecording;
+        %tmp.40 = invoke %tmp.38 %tmp.39();
+        push %tmp.40;
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_else_false:
+        %tmp.41 = false;
+        push %tmp.41;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_end:
+        %tmp.42 = phi [%tmp.35 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_begin] [%tmp.40 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_true] [%tmp.41 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_else_false] [%tmp.42 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_31_26_31_75_end];
+        lputv %isRecording.4 %tmp.42;
+        symbol [ isRecording %isRecording.4 31 12 23 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 34 8 ]
+        %tmp.43 = lgetv %dc;
+        symbol [ dc %tmp.43 34 8 10 ];
+        symbol [ drawText %tmp.44 34 11 19 ];
+        %tmp.44 = getv function %tmp.43 :drawText;
+        %tmp.45 = lgetv %width.1;
+        symbol [ width %tmp.45 34 20 25 ];
+        %tmp.46 = 2;
+        %tmp.47 = div %tmp.45 %tmp.46;
+        %tmp.48 = 10;
+        symbol [ Graphics %tmp.49 34 33 41 ];
+        %tmp.49 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.50 34 42 52 ];
+        %tmp.50 = getv %tmp.49 :FONT_SMALL;
+        %tmp.51 = "GOLF RANGE";
+        symbol [ Graphics %tmp.52 34 68 76 ];
+        %tmp.52 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.53 34 77 96 ];
+        %tmp.53 = getv %tmp.52 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.43 %tmp.44(%tmp.47, %tmp.48, %tmp.50, %tmp.51, %tmp.53);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 37 8 ]
+        %tmp.54 = lgetv %dc;
+        symbol [ dc %tmp.54 37 8 10 ];
+        symbol [ drawLine %tmp.55 37 11 19 ];
+        %tmp.55 = getv function %tmp.54 :drawLine;
+        %tmp.56 = 10;
+        %tmp.57 = 30;
+        %tmp.58 = lgetv %width.1;
+        symbol [ width %tmp.58 37 28 33 ];
+        %tmp.59 = 10;
+        %tmp.60 = sub %tmp.58 %tmp.59;
+        %tmp.61 = 30;
+        invoke %tmp.54 %tmp.55(%tmp.56, %tmp.57, %tmp.60, %tmp.61);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 40 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_stop" ]
+        %statusText.5 = local;
+        symbol [ statusText %statusText.5 40 12 22 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_begin:
+        %tmp.62 = lgetv %isRecording.4;
+        symbol [ isRecording %tmp.62 40 25 36 ];
+        bf %tmp.62 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_else_false;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_true:
+        %tmp.63 = "● RECORDING";
+        push %tmp.63;
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_else_false:
+        %tmp.64 = "STOPPED";
+        push %tmp.64;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_end:
+        %tmp.65 = phi [%tmp.62 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_begin] [%tmp.63 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_true] [%tmp.64 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_else_false] [%tmp.65 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_40_25_40_55_end];
+        lputv %statusText.5 %tmp.65;
+        symbol [ statusText %statusText.5 40 12 22 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 41 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_stop" ]
+        %statusColor.6 = local;
+        symbol [ statusColor %statusColor.6 41 12 23 ];
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_begin:
+        %tmp.66 = lgetv %isRecording.4;
+        symbol [ isRecording %tmp.66 41 26 37 ];
+        bf %tmp.66 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_else_false;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_true:
+        symbol [ Graphics %tmp.67 41 40 48 ];
+        %tmp.67 = getm $.Toybox.Graphics;
+        symbol [ COLOR_GREEN %tmp.68 41 49 60 ];
+        %tmp.68 = getv %tmp.67 :COLOR_GREEN;
+        push %tmp.68;
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_else_false:
+        symbol [ Graphics %tmp.69 41 63 71 ];
+        %tmp.69 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.70 41 72 81 ];
+        %tmp.70 = getv %tmp.69 :COLOR_RED;
+        push %tmp.70;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_end:
+        %tmp.71 = phi [%tmp.66 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_begin] [%tmp.68 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_true] [%tmp.70 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_else_false] [%tmp.71 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_41_26_41_72_end];
+        lputv %statusColor.6 %tmp.71;
+        symbol [ statusColor %statusColor.6 41 12 23 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 42 8 ]
+        %tmp.72 = lgetv %dc;
+        symbol [ dc %tmp.72 42 8 10 ];
+        symbol [ setColor %tmp.73 42 11 19 ];
+        %tmp.73 = getv function %tmp.72 :setColor;
+        %tmp.74 = lgetv %statusColor.6;
+        symbol [ statusColor %tmp.74 42 20 31 ];
+        symbol [ Graphics %tmp.75 42 33 41 ];
+        %tmp.75 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.76 42 42 59 ];
+        %tmp.76 = getv %tmp.75 :COLOR_TRANSPARENT;
+        invoke %tmp.72 %tmp.73(%tmp.74, %tmp.76);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 43 8 ]
+        %tmp.77 = lgetv %dc;
+        symbol [ dc %tmp.77 43 8 10 ];
+        symbol [ drawText %tmp.78 43 11 19 ];
+        %tmp.78 = getv function %tmp.77 :drawText;
+        %tmp.79 = lgetv %width.1;
+        symbol [ width %tmp.79 43 20 25 ];
+        %tmp.80 = 2;
+        %tmp.81 = div %tmp.79 %tmp.80;
+        %tmp.82 = 40;
+        symbol [ Graphics %tmp.83 43 33 41 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.84 43 42 51 ];
+        %tmp.84 = getv %tmp.83 :FONT_TINY;
+        %tmp.85 = lgetv %statusText.5;
+        symbol [ statusText %tmp.85 43 53 63 ];
+        symbol [ Graphics %tmp.86 43 65 73 ];
+        %tmp.86 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.87 43 74 93 ];
+        %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.77 %tmp.78(%tmp.81, %tmp.82, %tmp.84, %tmp.85, %tmp.87);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 46 8 ]
+        %tmp.88 = lgetv %dc;
+        symbol [ dc %tmp.88 46 8 10 ];
+        symbol [ setColor %tmp.89 46 11 19 ];
+        %tmp.89 = getv function %tmp.88 :setColor;
+        symbol [ Graphics %tmp.90 46 20 28 ];
+        %tmp.90 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.91 46 29 40 ];
+        %tmp.91 = getv %tmp.90 :COLOR_WHITE;
+        symbol [ Graphics %tmp.92 46 42 50 ];
+        %tmp.92 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.93 46 51 68 ];
+        %tmp.93 = getv %tmp.92 :COLOR_TRANSPARENT;
+        invoke %tmp.88 %tmp.89(%tmp.91, %tmp.93);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 49 8 ]
+        [ "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_start" "C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_stop" ]
+        %swingCountStr.7 = local;
+        symbol [ swingCountStr %swingCountStr.7 49 12 25 ];
+        %tmp.94 = lgetv %swingCount.3;
+        symbol [ swingCount %tmp.94 49 28 38 ];
+        symbol [ toString %tmp.95 49 39 47 ];
+        %tmp.95 = getv function %tmp.94 :toString;
+        %tmp.96 = invoke %tmp.94 %tmp.95();
+        lputv %swingCountStr.7 %tmp.96;
+        symbol [ swingCountStr %swingCountStr.7 49 12 25 ];
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 50 8 ]
+        %tmp.97 = lgetv %dc;
+        symbol [ dc %tmp.97 50 8 10 ];
+        symbol [ drawText %tmp.98 50 11 19 ];
+        %tmp.98 = getv function %tmp.97 :drawText;
+        %tmp.99 = lgetv %width.1;
+        symbol [ width %tmp.99 50 20 25 ];
+        %tmp.100 = 2;
+        %tmp.101 = div %tmp.99 %tmp.100;
+        %tmp.102 = lgetv %height.2;
+        symbol [ height %tmp.102 50 29 35 ];
+        %tmp.103 = 2;
+        %tmp.104 = div %tmp.102 %tmp.103;
+        %tmp.105 = 30;
+        %tmp.106 = sub %tmp.104 %tmp.105;
+        symbol [ Graphics %tmp.107 50 44 52 ];
+        %tmp.107 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.108 50 53 68 ];
+        %tmp.108 = getv %tmp.107 :FONT_NUMBER_HOT;
+        %tmp.109 = lgetv %swingCountStr.7;
+        symbol [ swingCountStr %tmp.109 50 70 83 ];
+        symbol [ Graphics %tmp.110 50 85 93 ];
+        %tmp.110 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.111 50 94 113 ];
+        %tmp.111 = getv %tmp.110 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.97 %tmp.98(%tmp.101, %tmp.106, %tmp.108, %tmp.109, %tmp.111);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 53 8 ]
+        %tmp.112 = lgetv %dc;
+        symbol [ dc %tmp.112 53 8 10 ];
+        symbol [ drawText %tmp.113 53 11 19 ];
+        %tmp.113 = getv function %tmp.112 :drawText;
+        %tmp.114 = lgetv %width.1;
+        symbol [ width %tmp.114 53 20 25 ];
+        %tmp.115 = 2;
+        %tmp.116 = div %tmp.114 %tmp.115;
+        %tmp.117 = lgetv %height.2;
+        symbol [ height %tmp.117 53 29 35 ];
+        %tmp.118 = 2;
+        %tmp.119 = div %tmp.117 %tmp.118;
+        %tmp.120 = 20;
+        %tmp.121 = add %tmp.119 %tmp.120;
+        symbol [ Graphics %tmp.122 53 44 52 ];
+        %tmp.122 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.123 53 53 64 ];
+        %tmp.123 = getv %tmp.122 :FONT_MEDIUM;
+        %tmp.124 = "SWINGS";
+        symbol [ Graphics %tmp.125 53 76 84 ];
+        %tmp.125 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.126 53 85 104 ];
+        %tmp.126 = getv %tmp.125 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.112 %tmp.113(%tmp.116, %tmp.121, %tmp.123, %tmp.124, %tmp.126);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 56 8 ]
+        %tmp.127 = lgetv %dc;
+        symbol [ dc %tmp.127 56 8 10 ];
+        symbol [ drawLine %tmp.128 56 11 19 ];
+        %tmp.128 = getv function %tmp.127 :drawLine;
+        %tmp.129 = 10;
+        %tmp.130 = lgetv %height.2;
+        symbol [ height %tmp.130 56 24 30 ];
+        %tmp.131 = 45;
+        %tmp.132 = sub %tmp.130 %tmp.131;
+        %tmp.133 = lgetv %width.1;
+        symbol [ width %tmp.133 56 37 42 ];
+        %tmp.134 = 10;
+        %tmp.135 = sub %tmp.133 %tmp.134;
+        %tmp.136 = lgetv %height.2;
+        symbol [ height %tmp.136 56 49 55 ];
+        %tmp.137 = 45;
+        %tmp.138 = sub %tmp.136 %tmp.137;
+        invoke %tmp.127 %tmp.128(%tmp.129, %tmp.132, %tmp.135, %tmp.138);
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 59 8 ]
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_59_8_63_8_if_stmt:
+        %tmp.139 = lgetv %isRecording.4;
+        symbol [ isRecording %tmp.139 59 12 23 ];
+        bf %tmp.139 @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_59_8_63_8_if_else_false;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_59_8_63_8_if_true:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_59_25_61_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 60 12 ]
+        %tmp.140 = lgetv %dc;
+        symbol [ dc %tmp.140 60 12 14 ];
+        symbol [ drawText %tmp.141 60 15 23 ];
+        %tmp.141 = getv function %tmp.140 :drawText;
+        %tmp.142 = lgetv %width.1;
+        symbol [ width %tmp.142 60 24 29 ];
+        %tmp.143 = 2;
+        %tmp.144 = div %tmp.142 %tmp.143;
+        %tmp.145 = lgetv %height.2;
+        symbol [ height %tmp.145 60 33 39 ];
+        %tmp.146 = 35;
+        %tmp.147 = sub %tmp.145 %tmp.146;
+        symbol [ Graphics %tmp.148 60 46 54 ];
+        %tmp.148 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.149 60 55 65 ];
+        %tmp.149 = getv %tmp.148 :FONT_XTINY;
+        %tmp.150 = "Press START to Stop";
+        symbol [ Graphics %tmp.151 60 90 98 ];
+        %tmp.151 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.152 60 99 118 ];
+        %tmp.152 = getv %tmp.151 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.140 %tmp.141(%tmp.144, %tmp.147, %tmp.149, %tmp.150, %tmp.152);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_59_25_61_8_stop:
+        goto @C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_59_8_63_8_if_end;
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_59_8_63_8_if_else_false:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_61_15_63_8_start:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 62 12 ]
+        %tmp.153 = lgetv %dc;
+        symbol [ dc %tmp.153 62 12 14 ];
+        symbol [ drawText %tmp.154 62 15 23 ];
+        %tmp.154 = getv function %tmp.153 :drawText;
+        %tmp.155 = lgetv %width.1;
+        symbol [ width %tmp.155 62 24 29 ];
+        %tmp.156 = 2;
+        %tmp.157 = div %tmp.155 %tmp.156;
+        %tmp.158 = lgetv %height.2;
+        symbol [ height %tmp.158 62 33 39 ];
+        %tmp.159 = 35;
+        %tmp.160 = sub %tmp.158 %tmp.159;
+        symbol [ Graphics %tmp.161 62 46 54 ];
+        %tmp.161 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.162 62 55 65 ];
+        %tmp.162 = getv %tmp.161 :FONT_XTINY;
+        %tmp.163 = "Press START to Begin";
+        symbol [ Graphics %tmp.164 62 91 99 ];
+        %tmp.164 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.165 62 100 119 ];
+        %tmp.165 = getv %tmp.164 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.153 %tmp.154(%tmp.157, %tmp.160, %tmp.162, %tmp.163, %tmp.165);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_61_15_63_8_stop:
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_59_8_63_8_if_end:
+[ "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc" 66 8 ]
+        %tmp.166 = lgetv %dc;
+        symbol [ dc %tmp.166 66 8 10 ];
+        symbol [ drawText %tmp.167 66 11 19 ];
+        %tmp.167 = getv function %tmp.166 :drawText;
+        %tmp.168 = 5;
+        %tmp.169 = lgetv %height.2;
+        symbol [ height %tmp.169 66 23 29 ];
+        %tmp.170 = 20;
+        %tmp.171 = sub %tmp.169 %tmp.170;
+        symbol [ Graphics %tmp.172 66 36 44 ];
+        %tmp.172 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.173 66 45 55 ];
+        %tmp.173 = getv %tmp.172 :FONT_XTINY;
+        %tmp.174 = "v1.0.0";
+        symbol [ Graphics %tmp.175 66 67 75 ];
+        %tmp.175 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.176 66 76 93 ];
+        %tmp.176 = getv %tmp.175 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.166 %tmp.167(%tmp.168, %tmp.171, %tmp.173, %tmp.174, %tmp.176);
+C__Users_fraio_Documents_garmingolf_source_GolfRangeView_mc_18_26_67_4_stop:
+    }
+    [ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 69; @symbol_functiondef = [onHide,69,13,19]; ]
+    function onHide() {
+    }
+}
+[ @file = "C:\Users\fraio\Documents\garmingolf\source\GolfRangeView.mc"; @line = 1; ]
+<init> {
+}

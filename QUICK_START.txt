@@ -1,0 +1,267 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                  ║
+║                         🏌️ GOLF RANGE APP - GARMIN CONNECT IQ                  ║
+║                                                                                  ║
+║                         APP COMPLETA CREATA CON SUCCESSO ✅                     ║
+║                                                                                  ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+📍 LOCATION: c:\Users\fraio\Documents\garmingolf\
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 STRUTTURA PROGETTO COMPLETA
+
+garmingolf/
+├── 🔧 CONFIGURAZIONE
+│   ├── manifest.xml              ← Permessi e metadata app
+│   ├── monkey.jungle             ← Configurazione build principale
+│   ├── build.properties          ← Proprietà build
+│   └── build.bat                 ← Script build Windows
+│       build.sh                  ← Script build macOS/Linux
+│
+├── 💻 CODICE SORGENTE (source/)
+│   ├── GolfRangeApp.mc          ← Entry point principale
+│   ├── GolfRangeDelegate.mc     ← Logica sensori + registrazione
+│   └── GolfRangeView.mc         ← Interfaccia utente
+│
+├── 📚 RISORSE (resources/)
+│   └── strings.xml               ← Stringhe app
+│
+├── ⚙️ VS CODE CONFIG (.vscode/)
+│   ├── tasks.json                ← Task build
+│   └── golf-range.code-workspace ← Workspace VS Code
+│
+└── 📖 DOCUMENTAZIONE
+    ├── README.md                 ← Guida generale (LEGGI QUESTO PRIMA)
+    ├── INSTALLATION.md           ← Setup e installazione completo
+    ├── CALIBRATION.md            ← Come calibrare la sensibilità
+    ├── FEATURES.md               ← Caratteristiche implementate
+    └── TROUBLESHOOTING.md        ← Guida al debug
+    └── QUICK_START.txt           ← Questo file
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 AVVIO VELOCE (3 STEP)
+
+STEP 1: Imposta GARMIN_HOME (SOLO PRIMA VOLTA)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Apri PowerShell e esegui:
+
+    [Environment]::SetEnvironmentVariable("GARMIN_HOME", "C:\garmin\connect-iq-sdk", "User")
+
+Sostituisci "C:\garmin\connect-iq-sdk" col tuo percorso di installazione SDK.
+
+Se hai dubbi, vedi: INSTALLATION.md (sezione "Impostare GARMIN_HOME")
+
+
+STEP 2: Compila l'App
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Apri PowerShell, naviga al progetto e esegui:
+
+    cd "C:\Users\fraio\Documents\garmingolf"
+    .\build.bat
+
+Attendi il messaggio: "Build completed successfully!"
+
+Questo genera: bin\GolfRange.prg
+
+
+STEP 3: Installa e Testa
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPZIONE A - Simulator (consigliato per il primo test):
+    1. Scarica Garmin Connect IQ Simulator (dal SDK)
+    2. Apri il Simulator
+    3. Seleziona Vivoactive 3 come device
+    4. Carica il file bin\GolfRange.prg
+    5. Clicca "Install"
+
+OPZIONE B - Dispositivo Fisico:
+    1. Connetti Vivoactive 3 via USB
+    2. Copia bin\GolfRange.prg in:
+       C:\Users\<YourUsername>\AppData\Garmin\ConnectIQApps\Apps\vivoactive3\
+    3. Sincronizza il dispositivo
+
+
+TEsteggia l'App:
+    1. Apri "Golf Range" sul Vivoactive 3
+    2. Premi il pulsante START/ENTER
+    3. Fai alcuni swing di prova
+    4. L'app dovrebbe contare gli swing
+    5. Premi START di nuovo per fermare
+
+
+PROBLEMA? Vedi TROUBLESHOOTING.md oppure continua sotto ↓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️ COSA CONTIENE L'APP
+
+✅ Rilevamento Automatico Swing (accelerometro)
+✅ Registrazione Attività Golf su Garmin Connect
+✅ Interfaccia Touch-friendly per Vivoactive 3
+✅ Contatore in Tempo Reale
+✅ Feedback Vibrazione per ogni Swing
+✅ Soglia Regolabile (per calibrazione)
+✅ Debounce Anti-Doppio Conteggio
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 FILE DOCUMENTAZIONE - QUALE LEGGERE?
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 🎯 Situazione                                  │ Leggi Questo File  │
+├───────────────────────────────────────────────┼────────────────────┤
+│ Prima volta: Non so da dove cominciare       │ README.md          │
+│ Setup e installazione sul dispositivo        │ INSTALLATION.md    │
+│ L'app non conta gli swing correttamente      │ CALIBRATION.md     │
+│ Voglio sapere cosa fa l'app esattamente      │ FEATURES.md        │
+│ L'app non compila / non funziona             │ TROUBLESHOOTING.md │
+│ Voglio personalizzare l'app                   │ FEATURES.md        │
+└───────────────────────────────────────────────┴────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 COMANDI UTILI
+
+# Aprire in VS Code
+code "C:\Users\fraio\Documents\garmingolf"
+
+# Compilare l'app
+cd "C:\Users\fraio\Documents\garmingolf"
+.\build.bat
+
+# Vedere log durante compilazione
+.\build.bat 2>&1 | Tee-Object -FilePath build_log.txt
+
+# Verificare GARMIN_HOME
+[Environment]::GetEnvironmentVariable("GARMIN_HOME", "User")
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 COME USARE L'APP SUL VIVOACTIVE 3
+
+1. AVVIARE L'APP
+   └─ Cerca "Golf Range" nella lista app
+   └─ Premi il pulsante START/ENTER
+
+2. INIZIARE SESSIONE
+   └─ Premi START/ENTER nuovamente
+   └─ Lo schermo dovrebbe mostrare "● RECORDING" in verde
+
+3. FARE SWING
+   └─ Fai naturalmente i tuoi swing al range
+   └─ L'app conta automaticamente (vibra ad ogni swing rilevato)
+   └─ Il numero dei swing aumenta sullo schermo
+
+4. TERMINARE SESSIONE
+   └─ Premi START/ENTER di nuovo
+   └─ Lo schermo mostrerà "STOPPED" in rosso
+   └─ La sessione si salva automaticamente
+
+5. SINCRONIZZARE CON GARMIN CONNECT
+   └─ La sessione appare in Garmin Connect entro 10 minuti
+   └─ Puoi vederla in "Le Mie Attività"
+   └─ Include: Swing Count, Durata, Calorie, Frequenza Cardiaca
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ SE LA SENSIBILITÀ NON È PERFETTA
+
+L'app potrebbe avere bisogno di CALIBRAZIONE.
+
+Se:
+✗ L'app conta TROPPI swing      → Aumenta SWING_THRESHOLD
+✗ L'app conta TROPPO POCHI      → Riduci SWING_THRESHOLD
+
+Come Modificare:
+    1. Apri: source/GolfRangeDelegate.mc
+    2. Trova la linea: const SWING_THRESHOLD = 2500;
+    3. Modifica il numero:
+       - Aumenta per meno sensibilità (es. 3000)
+       - Riduci per più sensibilità (es. 2000)
+    4. Ricompila: .\build.bat
+    5. Reinstalla l'app
+    6. Testa di nuovo
+
+Per una guida completa: Leggi CALIBRATION.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ DOMANDE FREQUENTI
+
+P: Posso modificare l'app?
+R: Sì! Modificare il codice in source/ e ricompilare con build.bat
+
+P: L'app funziona su altri dispositivi Garmin?
+R: Sì, ma devi compilare per il tuo dispositivo. Modifica build.bat e monkey.jungle
+
+P: Come faccio a vedere il numero di swing in Garmin Connect?
+R: L'app salva la sessione come attività Golf. Il numero è visibile su Vivoactive 3
+
+P: Quanto batteria consuma l'app?
+R: Dipende da quanto tempo usi. La registrazione attività è il consuntore principale
+
+P: Posso usare l'app senza Garmin Connect?
+R: Sì, ma allora perderai la sincronizzazione dei dati. L'app funziona offline
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🐛 SE QUALCOSA NON FUNZIONA
+
+Segui questi step in ordine:
+
+1. ☑️  Riavvia il Vivoactive 3
+       Tieni premuto il pulsante posteriore per 10 secondi
+
+2. ☑️  Riavvia il PC/Mac
+       Riavvia il computer completamente
+
+3. ☑️  Reinstalla l'App
+       Elimina bin/GolfRange.prg
+       Esegui build.bat di nuovo
+       Ricopia l'app sul dispositivo
+
+4. ☑️  Leggi TROUBLESHOOTING.md
+       Cerca il tuo specifico problema
+
+5. ☑️  Controlla i Log nel Simulator
+       Usa il Garmin Connect IQ Simulator per leggere i debug log
+
+Se ancora non funziona, controlla:
+- GARMIN_HOME è impostato? (vedi INSTALLATION.md)
+- SDK è installato correttamente? (vedi INSTALLATION.md)
+- Vivoactive 3 ha l'accelerometro? (Sì, ha questo sensore)
+- L'app compila senza errori? (Esegui build.bat e leggi i messaggi)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 SUPPORTO
+
+Documentazione: Vedi i file .md in questa cartella
+Problemi Garmin: https://developer.garmin.com/connect-iq/
+Forum: https://forums.garmin.com/developers
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ PRONTO PER INIZIARE?
+
+1. Leggi README.md per la visione generale
+2. Segui INSTALLATION.md per il setup
+3. Compila con build.bat
+4. Testa nel Simulator o sul Vivoactive 3
+5. Calibra se necessario usando CALIBRATION.md
+
+Buon allenamento al range! ⛳
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VERSIONE: 1.0.0
+DATA CREAZIONE: 2026-01-22
+DISPOSITIVO TARGET: Garmin Vivoactive 3
+SDK RICHIESTO: Garmin Connect IQ SDK 1.0.0+
+LINGUAGGIO: Monkey C (Garmin)
+

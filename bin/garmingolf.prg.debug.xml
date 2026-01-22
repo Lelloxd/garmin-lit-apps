@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\Users\fraio\Documents\garmingolf\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="1" lineNum="190" parent="globals/ThresholdMenuDelegate" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="2" lineNum="5" parent="globals/GolfRangeView" pc="268435479" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="3" lineNum="25" parent="globals" pc="268435498" symbol="getApp"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="3" lineNum="26" parent="globals" pc="268435508" symbol="getApp"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="4" lineNum="9" parent="globals/GolfRangeDelegate" pc="268435524" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\Users\\fraio\\Documents\\garmingolf\\bin\\gen\\006-B2700-00\\source\\Rez.mcgen" id="5" lineNum="7" parent="globals/Rez" pc="268435543" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="6" lineNum="4" parent="globals/GolfRangeApp" pc="268435567" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="7" lineNum="207" parent="globals/ThresholdMenuDelegate" pc="268435586" symbol="onBack"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="7" lineNum="208" parent="globals/ThresholdMenuDelegate" pc="268435588" symbol="onBack"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="8" lineNum="193" parent="globals/ThresholdMenuDelegate" pc="268435610" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="8" lineNum="194" parent="globals/ThresholdMenuDelegate" pc="268435612" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="8" lineNum="195" parent="globals/ThresholdMenuDelegate" pc="268435630" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="9" lineNum="198" parent="globals/ThresholdMenuDelegate" pc="268435641" symbol="onSelect"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="9" lineNum="199" parent="globals/ThresholdMenuDelegate" pc="268435645" symbol="onSelect"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="9" lineNum="200" parent="globals/ThresholdMenuDelegate" pc="268435658" symbol="onSelect"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="9" lineNum="202" parent="globals/ThresholdMenuDelegate" pc="268435665" symbol="onSelect"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="9" lineNum="204" parent="globals/ThresholdMenuDelegate" pc="268435688" symbol="onSelect"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="10" lineNum="9" parent="globals/GolfRangeView" pc="268435710" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="10" lineNum="10" parent="globals/GolfRangeView" pc="268435712" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="10" lineNum="11" parent="globals/GolfRangeView" pc="268435730" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="18" parent="globals/GolfRangeView" pc="268435740" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="20" parent="globals/GolfRangeView" pc="268435744" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="21" parent="globals/GolfRangeView" pc="268435766" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="24" parent="globals/GolfRangeView" pc="268435778" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="26" parent="globals/GolfRangeView" pc="268435800" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="27" parent="globals/GolfRangeView" pc="268435813" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="30" parent="globals/GolfRangeView" pc="268435826" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="31" parent="globals/GolfRangeView" pc="268435866" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="34" parent="globals/GolfRangeView" pc="268435903" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="37" parent="globals/GolfRangeView" pc="268435943" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="40" parent="globals/GolfRangeView" pc="268435978" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="41" parent="globals/GolfRangeView" pc="268435998" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="42" parent="globals/GolfRangeView" pc="268436018" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="43" parent="globals/GolfRangeView" pc="268436037" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="46" parent="globals/GolfRangeView" pc="268436074" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="49" parent="globals/GolfRangeView" pc="268436096" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="50" parent="globals/GolfRangeView" pc="268436109" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="53" parent="globals/GolfRangeView" pc="268436155" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="56" parent="globals/GolfRangeView" pc="268436204" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="59" parent="globals/GolfRangeView" pc="268436245" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="60" parent="globals/GolfRangeView" pc="268436250" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="62" parent="globals/GolfRangeView" pc="268436296" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="12" lineNum="66" parent="globals/GolfRangeView" pc="268436339" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="13" lineNum="14" parent="globals/GolfRangeView" pc="268436380" symbol="setDelegate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeView.mc" id="13" lineNum="15" parent="globals/GolfRangeView" pc="268436382" symbol="setDelegate"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="14" lineNum="176" parent="globals/GolfRangeDelegate" pc="268436393" symbol="getTotalDistance"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="14" lineNum="177" parent="globals/GolfRangeDelegate" pc="268436395" symbol="getTotalDistance"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="15" lineNum="63" parent="globals/GolfRangeDelegate" pc="268436404" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="15" lineNum="64" parent="globals/GolfRangeDelegate" pc="268436408" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="15" lineNum="65" parent="globals/GolfRangeDelegate" pc="268436428" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="15" lineNum="67" parent="globals/GolfRangeDelegate" pc="268436475" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="15" lineNum="69" parent="globals/GolfRangeDelegate" pc="268436493" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="15" lineNum="72" parent="globals/GolfRangeDelegate" pc="268436559" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="15" lineNum="73" parent="globals/GolfRangeDelegate" pc="268436585" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="15" lineNum="74" parent="globals/GolfRangeDelegate" pc="268436610" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="15" lineNum="77" parent="globals/GolfRangeDelegate" pc="268436616" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="136" parent="globals/GolfRangeDelegate" pc="268436619" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="137" parent="globals/GolfRangeDelegate" pc="268436623" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="137" parent="globals/GolfRangeDelegate" pc="268436635" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="139" parent="globals/GolfRangeDelegate" pc="268436639" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="140" parent="globals/GolfRangeDelegate" pc="268436649" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="141" parent="globals/GolfRangeDelegate" pc="268436695" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="142" parent="globals/GolfRangeDelegate" pc="268436711" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="143" parent="globals/GolfRangeDelegate" pc="268436727" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="146" parent="globals/GolfRangeDelegate" pc="268436743" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="149" parent="globals/GolfRangeDelegate" pc="268436786" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="150" parent="globals/GolfRangeDelegate" pc="268436803" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="151" parent="globals/GolfRangeDelegate" pc="268436837" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="152" parent="globals/GolfRangeDelegate" pc="268436856" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="153" parent="globals/GolfRangeDelegate" pc="268436866" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="156" parent="globals/GolfRangeDelegate" pc="268436876" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="157" parent="globals/GolfRangeDelegate" pc="268436891" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="158" parent="globals/GolfRangeDelegate" pc="268436943" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="161" parent="globals/GolfRangeDelegate" pc="268436964" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="16" lineNum="162" parent="globals/GolfRangeDelegate" pc="268436980" symbol="onSensor"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="42" parent="globals/GolfRangeDelegate" pc="268437032" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="43" parent="globals/GolfRangeDelegate" pc="268437036" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="45" parent="globals/GolfRangeDelegate" pc="268437049" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="46" parent="globals/GolfRangeDelegate" pc="268437071" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="47" parent="globals/GolfRangeDelegate" pc="268437082" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="49" parent="globals/GolfRangeDelegate" pc="268437097" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="51" parent="globals/GolfRangeDelegate" pc="268437109" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="55" parent="globals/GolfRangeDelegate" pc="268437115" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="56" parent="globals/GolfRangeDelegate" pc="268437126" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="17" lineNum="59" parent="globals/GolfRangeDelegate" pc="268437132" symbol="onKey"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="80" parent="globals/GolfRangeDelegate" pc="268437135" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="81" parent="globals/GolfRangeDelegate" pc="268437139" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="84" parent="globals/GolfRangeDelegate" pc="268437154" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="89" parent="globals/GolfRangeDelegate" pc="268437222" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="90" parent="globals/GolfRangeDelegate" pc="268437240" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="91" parent="globals/GolfRangeDelegate" pc="268437250" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="92" parent="globals/GolfRangeDelegate" pc="268437263" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="93" parent="globals/GolfRangeDelegate" pc="268437276" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="96" parent="globals/GolfRangeDelegate" pc="268437289" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="97" parent="globals/GolfRangeDelegate" pc="268437304" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="98" parent="globals/GolfRangeDelegate" pc="268437356" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="101" parent="globals/GolfRangeDelegate" pc="268437377" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="102" parent="globals/GolfRangeDelegate" pc="268437393" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="103" parent="globals/GolfRangeDelegate" pc="268437420" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="18" lineNum="104" parent="globals/GolfRangeDelegate" pc="268437424" symbol="startRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="19" lineNum="181" parent="globals/GolfRangeDelegate" pc="268437473" symbol="setSwingThreshold"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="19" lineNum="182" parent="globals/GolfRangeDelegate" pc="268437475" symbol="setSwingThreshold"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="19" lineNum="183" parent="globals/GolfRangeDelegate" pc="268437485" symbol="setSwingThreshold"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="19" lineNum="184" parent="globals/GolfRangeDelegate" pc="268437517" symbol="setSwingThreshold"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="20" lineNum="168" parent="globals/GolfRangeDelegate" pc="268437542" symbol="getSwingCount"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="20" lineNum="169" parent="globals/GolfRangeDelegate" pc="268437544" symbol="getSwingCount"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="21" lineNum="23" parent="globals/GolfRangeDelegate" pc="268437553" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="21" lineNum="24" parent="globals/GolfRangeDelegate" pc="268437557" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="21" lineNum="27" parent="globals/GolfRangeDelegate" pc="268437575" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="21" lineNum="28" parent="globals/GolfRangeDelegate" pc="268437606" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="21" lineNum="29" parent="globals/GolfRangeDelegate" pc="268437613" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="21" lineNum="33" parent="globals/GolfRangeDelegate" pc="268437626" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="21" lineNum="38" parent="globals/GolfRangeDelegate" pc="268437670" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="22" lineNum="172" parent="globals/GolfRangeDelegate" pc="268437705" symbol="getIsRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="22" lineNum="173" parent="globals/GolfRangeDelegate" pc="268437707" symbol="getIsRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="109" parent="globals/GolfRangeDelegate" pc="268437716" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="110" parent="globals/GolfRangeDelegate" pc="268437720" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="112" parent="globals/GolfRangeDelegate" pc="268437744" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="113" parent="globals/GolfRangeDelegate" pc="268437762" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="114" parent="globals/GolfRangeDelegate" pc="268437780" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="115" parent="globals/GolfRangeDelegate" pc="268437789" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="118" parent="globals/GolfRangeDelegate" pc="268437799" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="119" parent="globals/GolfRangeDelegate" pc="268437814" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="124" parent="globals/GolfRangeDelegate" pc="268437954" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="127" parent="globals/GolfRangeDelegate" pc="268437975" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="128" parent="globals/GolfRangeDelegate" pc="268437991" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="129" parent="globals/GolfRangeDelegate" pc="268438027" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeDelegate.mc" id="23" lineNum="130" parent="globals/GolfRangeDelegate" pc="268438031" symbol="stopRecording"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="24" lineNum="10" parent="globals/GolfRangeApp" pc="268438080" symbol="onStart"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="25" lineNum="16" parent="globals/GolfRangeApp" pc="268438083" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="25" lineNum="17" parent="globals/GolfRangeApp" pc="268438087" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="25" lineNum="18" parent="globals/GolfRangeApp" pc="268438111" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="25" lineNum="19" parent="globals/GolfRangeApp" pc="268438135" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="25" lineNum="20" parent="globals/GolfRangeApp" pc="268438149" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="26" lineNum="6" parent="globals/GolfRangeApp" pc="268438176" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="26" lineNum="7" parent="globals/GolfRangeApp" pc="268438178" symbol="initialize"/>
+        <entry filename="C:\\Users\\fraio\\Documents\\garmingolf\\source\\GolfRangeApp.mc" id="27" lineNum="13" parent="globals/GolfRangeApp" pc="268438197" symbol="onStop"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="7" object="true" symbol="GolfRangeView"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="8391333" symbol="delegate"/>
+        <entry id="20" method="true" symbol="stopRecording"/>
+        <entry id="19" method="true" symbol="startRecording"/>
+        <entry id="8388638" module="true" symbol="ActivityRecording"/>
+        <entry field="true" id="8388890" symbol="sport"/>
+        <entry field="true" id="15" symbol="lastUpdateTime"/>
+        <entry field="true" id="14" symbol="lastSwingTime"/>
+        <entry id="8390135" symbol="enableAccelerometer"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="13" method="true" symbol="getTotalDistance"/>
+        <entry field="true" id="10" symbol="SWING_THRESHOLD"/>
+        <entry field="true" id="25" symbol="AppName"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="5" object="true" symbol="GolfRangeApp"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="22" symbol="totalDistance"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="9" symbol="_mainDelegate"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="21" symbol="swingCount"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry field="true" id="8390134" symbol="sampleRate"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="24" symbol="AppDescription"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="16" method="true" symbol="onSensor"/>
+        <entry field="true" id="8388881" method="true" symbol="isRecording"/>
+        <entry field="true" id="23" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8388643" module="true" symbol="Sensor"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="8388891" symbol="subSport"/>
+        <entry field="true" id="8388892" symbol="name"/>
+        <entry id="11" method="true" symbol="getIsRecording"/>
+        <entry id="8389808" symbol="period"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="18" method="true" symbol="setSwingThreshold"/>
+        <entry id="8389097" method="true" symbol="onKey"/>
+        <entry id="6" object="true" symbol="GolfRangeDelegate"/>
+        <entry id="8" object="true" symbol="ThresholdMenuDelegate"/>
+        <entry id="8388636" module="true" symbol="Attention"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="17" symbol="session"/>
+        <entry id="12" method="true" symbol="getSwingCount"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="8389642" symbol="title"/>
+        <entry id="8391224" method="true" symbol="setDelegate"/>
+        <entry id="8389101" method="true" symbol="onSwipe"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435640" name="mainDelegate" stackId="1" startPc="268435610"/>
+        <entry arg="true" endPc="268435709" name="item" stackId="1" startPc="268435641"/>
+        <entry endPc="268435708" name="id" stackId="2" startPc="268435645"/>
+        <entry arg="true" endPc="268436379" name="dc" stackId="1" startPc="268435740"/>
+        <entry endPc="268436378" name="width" stackId="2" startPc="268435744"/>
+        <entry endPc="268436378" name="height" stackId="3" startPc="268435744"/>
+        <entry endPc="268436378" name="swingCount" stackId="4" startPc="268435744"/>
+        <entry endPc="268436378" name="isRecording" stackId="5" startPc="268435744"/>
+        <entry endPc="268436378" name="statusText" stackId="6" startPc="268435744"/>
+        <entry endPc="268436378" name="statusColor" stackId="7" startPc="268435744"/>
+        <entry endPc="268436378" name="swingCountStr" stackId="8" startPc="268435744"/>
+        <entry arg="true" endPc="268436392" name="del" stackId="1" startPc="268436380"/>
+        <entry arg="true" endPc="268436618" name="swipeEvent" stackId="1" startPc="268436404"/>
+        <entry endPc="268436612" name="menu" stackId="2" startPc="268436428"/>
+        <entry endPc="268436558" name="i" stackId="3" startPc="268436493"/>
+        <entry endPc="268436612" name="delegate" stackId="4" startPc="268436428"/>
+        <entry arg="true" endPc="268437031" name="sensorData" stackId="1" startPc="268436619"/>
+        <entry endPc="268437030" name="acc" stackId="2" startPc="268436623"/>
+        <entry endPc="268437027" name="x" stackId="3" startPc="268436695"/>
+        <entry endPc="268437027" name="y" stackId="4" startPc="268436695"/>
+        <entry endPc="268437027" name="z" stackId="5" startPc="268436695"/>
+        <entry endPc="268437027" name="magnitude" stackId="6" startPc="268436695"/>
+        <entry endPc="268437027" name="now" stackId="7" startPc="268436695"/>
+        <entry endPc="268436960" name="vibeData" stackId="8" startPc="268436891"/>
+        <entry arg="true" endPc="268437134" name="keyEvent" stackId="1" startPc="268437032"/>
+        <entry endPc="268437134" name="key" stackId="2" startPc="268437036"/>
+        <entry endPc="268437373" name="vibeData" stackId="1" startPc="268437304"/>
+        <entry endPc="268437463" name="e" stackId="2" startPc="268437420"/>
+        <entry arg="true" endPc="268437541" name="newThreshold" stackId="1" startPc="268437473"/>
+        <entry endPc="268437703" name="storedThreshold" stackId="1" startPc="268437557"/>
+        <entry endPc="268437703" name="options" stackId="2" startPc="268437557"/>
+        <entry endPc="268437971" name="vibeData" stackId="1" startPc="268437814"/>
+        <entry endPc="268438070" name="e" stackId="2" startPc="268438027"/>
+        <entry endPc="268438175" name="view" stackId="1" startPc="268438087"/>
+        <entry endPc="268438175" name="delegate" stackId="2" startPc="268438087"/>
+    </localVars>
+    <deviceInfo deviceVersion="8fc30743a4191ec19bcafa28e3ffcc2b5a958a17" partNumber="006-B2700-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppDescription"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="55" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/ThresholdMenuDelegate" offset="142" parentId="globals" symbolId="ThresholdMenuDelegate" type="class"/>
+        <dataEntry label="globals/GolfRangeView" offset="213" parentId="globals" symbolId="GolfRangeView" type="class"/>
+        <dataEntry label="globals/GolfRangeDelegate" offset="292" parentId="globals" symbolId="GolfRangeDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="467" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/GolfRangeApp" offset="514" parentId="globals" symbolId="GolfRangeApp" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="585" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="624" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="ThresholdMenuDelegate" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435497" name="&lt;init&gt;" parent="GolfRangeView" startPc="268435479">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435523" name="getApp" startPc="268435498">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435542" name="&lt;init&gt;" parent="GolfRangeDelegate" startPc="268435524">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435566" name="&lt;init&gt;" parent="Rez" startPc="268435543">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435585" name="&lt;init&gt;" parent="GolfRangeApp" startPc="268435567">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435609" name="onBack" parent="ThresholdMenuDelegate" startPc="268435586">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435640" name="initialize" parent="ThresholdMenuDelegate" startPc="268435610">
+            <param id="mainDelegate"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435709" name="onSelect" parent="ThresholdMenuDelegate" startPc="268435641">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435739" name="initialize" parent="GolfRangeView" startPc="268435710">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="GolfRangeView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436379" name="onUpdate" parent="GolfRangeView" startPc="268435740">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436392" name="setDelegate" parent="GolfRangeView" startPc="268436380">
+            <param id="del"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436403" name="getTotalDistance" parent="GolfRangeDelegate" startPc="268436393">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436618" name="onSwipe" parent="GolfRangeDelegate" startPc="268436404">
+            <param id="swipeEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437031" name="onSensor" parent="GolfRangeDelegate" startPc="268436619">
+            <param id="sensorData"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437134" name="onKey" parent="GolfRangeDelegate" startPc="268437032">
+            <param id="keyEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437472" name="startRecording" parent="GolfRangeDelegate" startPc="268437135">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437541" name="setSwingThreshold" parent="GolfRangeDelegate" startPc="268437473">
+            <param id="newThreshold"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437552" name="getSwingCount" parent="GolfRangeDelegate" startPc="268437542">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437704" name="initialize" parent="GolfRangeDelegate" startPc="268437553">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437715" name="getIsRecording" parent="GolfRangeDelegate" startPc="268437705">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438079" name="stopRecording" parent="GolfRangeDelegate" startPc="268437716">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438082" name="onStart" parent="GolfRangeApp" startPc="268438080">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438175" name="getInitialView" parent="GolfRangeApp" startPc="268438083">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438196" name="initialize" parent="GolfRangeApp" startPc="268438176">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438199" name="onStop" parent="GolfRangeApp" startPc="268438197">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
