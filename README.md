@@ -41,64 +41,64 @@ If the app misses swings or counts too many, you can calibrate the sensitivity t
 
 ```
 garmingolf/
-├── manifest.xml              # Configurazione permessi app
-├── monkey.jungle             # Configurazione build
+├── manifest.xml
+├── monkey.jungle
 ├── source/
-│   ├── GolfRangeApp.mc      # Entry point dell'applicazione
-│   ├── GolfRangeDelegate.mc # Logica rilevamento swing
-│   └── GolfRangeView.mc     # Interfaccia utente
+│   ├── GolfRangeApp.mc
+│   ├── GolfRangeDelegate.mc 
+│   └── GolfRangeView.mc     
 └── resources/
-    └── strings.xml          # Stringhe e localizzazione
+    └── strings.xml          
 ```
+## Technical Details
 
-## Dettagli Tecnici
+### Swing Detection
+The app monitors the device's internal sensors to detect:
+* **Acceleration Magnitude:** Real-time analysis of the 3-axis acceleration vector.
+* **Debounce Logic:** A 1.5-second lockout period between detections to eliminate "double-counting" during the follow-through.
+* **Adjustable Threshold:** Sensitivity can be tuned via the on-device menu (default: 2000mg).
 
-### Rilevamento Swing
+### Activity Recording
+* **Garmin Integration:** Uses `ActivityRecording` to create native `.FIT` files.
+* **Auto-Sync:** Seamlessly uploads data to the Garmin Connect cloud.
+* **Developer Fields:** Includes custom fields for total swing count and "swings-per-moment" activity charts.
 
-L'app utilizza l'accelerometro del dispositivo per rilevare:
-- La magnitudo del vettore accelerazione durante lo swing
-- Un debounce di 1,5 secondi per evitare conteggi duplicati
-- Una soglia di sensibilità (modificabile)
+### Haptic Feedback
+* **Single Vibration:** Swing successfully detected.
+* **Double Vibration:** Recording session started.
+* **Triple Vibration:** Session stopped and data saved.
 
-### Registrazione Attività
-
-- Salvata come attività "Golf" su Garmin Connect
-- Sincronizzata automaticamente con l'app Garmin Connect
-- Include durata, calorie (calcolate su battito cardiaco), e metadati
-
-### Feedback Utente
-
-- **Vibrazione singola** = Swing rilevato
-- **Vibrazione doppia** = Inizio registrazione
-- **Vibrazione tripla** = Fine registrazione
+---
 
 ## Troubleshooting
 
-**L'app non conta nessuno swing:**
-- La soglia potrebbe essere troppo alta. Riduci `SWING_THRESHOLD`
-- Assicurati di fare swing ampi e veloci
+**The app is not counting any swings:**
+* The sensitivity threshold might be too high. Swipe left to open the menu and reduce the `SWING_THRESHOLD`.
+* Ensure you are performing full, high-velocity swings.
 
-**L'app conta troppi swing:**
-- La soglia potrebbe essere troppo bassa. Aumenta `SWING_THRESHOLD`
-- Potrebbe contare il movimento di ritorno. Aumenta `MIN_TIME_BETWEEN_SWINGS`
+**The app is counting too many swings:**
+* The threshold might be too low. Increase the `SWING_THRESHOLD`.
+* If the app catches the backswing, consider increasing the `MIN_TIME_BETWEEN_SWINGS` in the source code.
 
-**L'app si blocca:**
-- Riavvia il dispositivo Vivoactive 3
-- Riinstalla l'app
+**The app is unresponsive:**
+* Restart your Vivoactive 3 device.
+* Reinstall the app via the Connect IQ Store or Garmin Express.
 
-## Versione
+---
 
-- **v1.0.0** - Release iniziale
+## Development & Compatibility
 
-## Autore
+* **SDK Version:** Optimized for Connect IQ SDK 7.x and 8.x.
+* **Resolution:** 240x240 px (Optimized for round displays like Vivoactive 3).
+* **Sampling:** 25Hz Accelerometer rate for high accuracy with low battery impact.
 
-Sviluppato per Garmin Connect IQ
+## Versioning
+* **v1.0.0** - Initial Release: Core swing detection, Golf activity profile, and FIT charts.
 
-## Note
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Per il Vivoactive 3, l'app è ottimizzata per:
-- Schermo AMOLED 240x240 px
-- Accelerometro a 25Hz
-- Pulsante fisico e touchscreen
+---
 
-Goditi il tuo allenamento al range! ⛳
+*Enjoy your practice session at the range!* ⛳
+
