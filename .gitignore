@@ -4,6 +4,7 @@ gen/
 mir/
 internal-mir/
 debug/
+.vscode/
 
 # Compiled Binaries and Debug Info
 *.prg
