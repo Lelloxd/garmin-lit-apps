@@ -2,6 +2,7 @@ using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.Activity;
 using Toybox.Lang;
+using Toybox.System;
 
 class GolfRangeView extends WatchUi.View {
 
@@ -35,6 +36,12 @@ class GolfRangeView extends WatchUi.View {
         
         var info = Activity.getActivityInfo();
         var calories = (info != null && info.calories != null) ? info.calories : 0;
+
+        // --- ORARIO ATTUALE ---
+        var clockTime = System.getClockTime();
+        var timeStr = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(_screenWidth / 2, _screenHeight * 0.03, Graphics.FONT_XTINY, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
 
         // --- DISEGNO INTERFACCIA ---
         // Indicatore di Stato (Pallino colorato + Testo)
