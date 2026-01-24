@@ -1,40 +1,43 @@
-# Golf Range App - Garmin Connect IQ
+# Golf Range Swings - Garmin Connect IQ
 
-Un'applicazione per Garmin Vivoactive 3 che traccia automaticamente il numero di swing durante una sessione al practice range.
+An application for Garmin devices (Vivoactive 3, Fenix, Forerunner, etc.) that automatically tracks the number of swings during a practice range session.
 
-## Caratteristiche
+🌐 **Website & Guide:** [Visit Official Site](https://lelloxd.github.io/garmin-lit-apps/)
+📂 **Source Code:** [GitHub Repository](https://github.com/Lelloxd/garmin-lit-apps)
 
-- ✅ **Rilevamento automatico degli swing** tramite accelerometro
-- ✅ **Registrazione attività** salvata su Garmin Connect
-- ✅ **Interfaccia touch-friendly** per il Vivoactive 3
-- ✅ **Feedback aptico** per ogni swing rilevato
-- ✅ **Contatore in tempo reale**
+## Features
 
-## Come Usare
+- ✅ **Automatic Swing Detection** via accelerometer
+- ✅ **Activity Recording** saved to Garmin Connect (Golf)
+- ✅ **Touch-friendly & Button Interface**
+- ✅ **Haptic Feedback** for every detected swing
+- ✅ **Real-time Counter**
 
-1. Avvia l'app "Golf Range" dal tuo Vivoactive 3
-2. Premi il pulsante START per iniziare la registrazione
-3. L'app inizierà a contare automaticamente gli swing quando rileva l'accelerazione
-4. Premi START di nuovo per terminare la sessione
-5. La sessione verrà salvata automaticamente e sincronizzata con Garmin Connect
+## How to Use
 
-## Calibrazione
+1. Launch the "Golf Range Swings" app on your device.
+2. Press the **START** button to begin recording.
+3. The app will automatically count swings when acceleration is detected.
+4. Press **START** again to stop the session.
+5. The session will be automatically saved and synced with Garmin Connect.
 
-Se l'app non rileva i tuoi swing o ne conta troppi, puoi calibrare la soglia di sensibilità:
+## Calibration
 
-1. Apri il file `source/GolfRangeDelegate.mc`
-2. Modifica la costante `SWING_THRESHOLD`:
-   - **Valore più basso** (es. 2000) = più sensibile (conta anche swing leggeri)
-   - **Valore più alto** (es. 3500) = meno sensibile (conta solo swing forti)
-3. Ricompila l'app
+If the app misses swings or counts too many, you can calibrate the sensitivity threshold:
 
-## Requisiti
+1. Open the file `source/GolfRangeDelegate.mc`.
+2. Modify the `SWING_THRESHOLD` constant:
+   - **Lower value** (e.g., 2000) = More sensitive (detects lighter swings).
+   - **Higher value** (e.g., 3500) = Less sensitive (detects only strong swings).
+3. Recompile the app.
 
-- Garmin Vivoactive 3
+## Requirements
+
+- Garmin Device (Vivoactive 3, Venu, Fenix, Forerunner, etc.)
 - Garmin Connect IQ SDK
 - MonkeyC Compiler
 
-## Struttura del Progetto
+## Project Structure
 
 ```
 garmingolf/
