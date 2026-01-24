@@ -12,7 +12,9 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.smartwatch-screenshot {
+    width: 300px;
+}
 body {
     background-color: var(--dark);
     color: var(--light);
@@ -35,6 +37,18 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.branding {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-logo {
+    height: 20px;
+    width: auto;
+    margin-bottom: 5px;
 }
 
 nav a {
@@ -66,7 +80,6 @@ nav a {
     padding: 80px 0;
     text-align: center;
 }
-
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -252,4 +265,13 @@ footer {
     .hero-content {
         padding: 0 10px;
     }
+      .branding h1 {
+    font-size: 1.5rem;
+}
+.smartwatch-screenshot {
+    width: 200px;
+}
+.hero {
+    padding: 20px 0;
+}
 }
