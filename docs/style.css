@@ -51,6 +51,16 @@ nav a {
     color: var(--dark) !important;
 }
 
+/* Hamburger Menu Button (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 /* Hero Section */
 .hero {
     padding: 80px 0;
@@ -73,6 +83,7 @@ nav a {
     display: inline-block;
     padding: 12px 30px;
     margin: 0 10px;
+    margin-top: 10px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -198,4 +209,47 @@ footer {
     padding: 20px;
     color: #666;
     font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE DESIGN (Mobile) --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra il bottone hamburger */
+    }
+
+    header .container {
+        position: relative;
+    }
+
+    nav {
+        display: none; /* Nascondi menu di default su mobile */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark);
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex; /* Mostra quando attivo */
+    }
+
+    nav a {
+        display: block;
+        margin: 15px 0;
+        margin-left: 0;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content {
+        padding: 0 10px;
+    }
 }
