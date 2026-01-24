@@ -1,0 +1,20 @@
+# Garmin Connect IQ Build Output
+bin/
+gen/
+mir/
+internal-mir/
+debug/
+
+# Compiled Binaries and Debug Info
+*.prg
+*.iq
+*.sig
+*.debug.xml
+
+# Logs
+*.log
+build_log.txt
+
+# System Files
+.DS_Store
+Thumbs.db

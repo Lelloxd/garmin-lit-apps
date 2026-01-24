@@ -71,6 +71,12 @@ function initialize(view) {
             return true;
         }
 
+        // Aggiungiamo il supporto al tasto MENU per orologi senza touch (es. Fenix, Forerunner)
+        if (key == WatchUi.KEY_MENU) {
+            openThresholdMenu();
+            return true;
+        }
+
         // Tasto BACK per tornare indietro
         if (key == WatchUi.KEY_ESC) {
             return false;
@@ -82,20 +88,7 @@ function initialize(view) {
     // Gestione dello swipe per aprire il menu delle impostazioni
     function onSwipe(swipeEvent) {
         if (swipeEvent.getDirection() == WatchUi.SWIPE_LEFT) {
-            var menu = new WatchUi.Menu2({:title=>"Threshold"});
-            // Aggiunge le opzioni da 1500 a 5000
-            for (var i = 1500; i <= 5000; i += 250) {
-                var subLabel = null;
-                // Evidenzia il valore attuale
-                if (i == SWING_THRESHOLD) {
-                    subLabel = "Current";
-                }
-                // L'ID dell'item sarà il valore stesso della soglia
-                menu.addItem(new WatchUi.MenuItem(i.toString(), subLabel, i, null));
-            }
-
-            var delegate = new ThresholdMenuDelegate(self);
-            WatchUi.pushView(menu, delegate, WatchUi.SLIDE_LEFT);
+            openThresholdMenu();
             return true;
         }
 
@@ -116,6 +109,24 @@ function initialize(view) {
             return true;
         }
         return false;
+    }
+
+    // Funzione helper per aprire il menu (usata sia da Swipe che da Tasto)
+    function openThresholdMenu() {
+        var menu = new WatchUi.Menu2({:title=>"Threshold"});
+        // Aggiunge le opzioni da 1500 a 5000
+        for (var i = 1500; i <= 5000; i += 250) {
+            var subLabel = null;
+            // Evidenzia il valore attuale
+            if (i == SWING_THRESHOLD) {
+                subLabel = "Current";
+            }
+            // L'ID dell'item sarà il valore stesso della soglia
+            menu.addItem(new WatchUi.MenuItem(i.toString(), subLabel, i, null));
+        }
+
+        var delegate = new ThresholdMenuDelegate(self);
+        WatchUi.pushView(menu, delegate, WatchUi.SLIDE_LEFT);
     }
 
 function startRecording() {
