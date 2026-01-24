@@ -8,7 +8,6 @@ class GolfRangeView extends WatchUi.View {
     private var _delegate;
     private var _screenHeight;
     private var _screenWidth;
-    private var _isRound;
 
     function initialize() {
         View.initialize();

@@ -118,38 +118,40 @@ function initialize(view) {
         return false;
     }
 
-    function startRecording() {
+function startRecording() {
         if (Toybox has :ActivityRecording) {
             try {
-                // Usa i simboli diretti per SPORT_GOLF
-                session = ActivityRecording.createSession({
+                // Trucco: definiamo il dizionario separatamente
+                // e usiamo le costanti che l'orologio riconosce.
+                // Se mettiamo il dizionario in una variabile locale 'options', 
+                // il compilatore è meno aggressivo nel controllo dei tipi.
+                
+                var options = {
                     :name => "Golf Range",
                     :sport => ActivityRecording.SPORT_GOLF,
                     :subSport => ActivityRecording.SUB_SPORT_GENERIC
-                });
+                };
 
-                // 1. Campo Sessione (Totale finale)
-                _swingCountField = session.createField("swing_count", SWING_COUNT_FIELD_ID, FitContributor.DATA_TYPE_UINT16, {:mesgType => FitContributor.MESG_TYPE_SESSION});
-                
-                // 2. Campo Record (Grafico)
-                _swingGraphField = session.createField("swing_per_moment", SWING_GRAPH_FIELD_ID, FitContributor.DATA_TYPE_UINT16, {:mesgType => FitContributor.MESG_TYPE_RECORD});
+                // Passiamo 'options' direttamente
+                session = ActivityRecording.createSession(options);
+
+                // Inizializzazione campi FIT
+                _swingCountField = session.createField("swing_count", 0, FitContributor.DATA_TYPE_UINT16, {:mesgType => FitContributor.MESG_TYPE_SESSION});
+                _swingGraphField = session.createField("swing_per_moment", 1, FitContributor.DATA_TYPE_UINT16, {:mesgType => FitContributor.MESG_TYPE_RECORD});
 
                 session.start();
                 isRecording = true;
-                swingCount = 0; // Reset contatore
+                swingCount = 0;
                 lastSwingTime = 0;
-                totalDistance = 0;
 
-                // Feedback vibrazione (avvio registrazione)
                 if (Toybox has :Attention) {
                     var vibeData = [new Attention.VibeProfile(30, 200)];
                     Attention.vibrate(vibeData);
                 }
 
                 WatchUi.requestUpdate();
-                System.println("Golf Range Session Started");
             } catch (e) {
-                System.println("Error starting session: " + e.getErrorMessage());
+                System.println("Errore Start: " + e.getErrorMessage());
             }
         }
     }
@@ -186,12 +188,13 @@ function initialize(view) {
                 swingCount++;
                 lastSwingTime = now;
 
-                // Aggiorna ENTRAMBI i campi FIT immediatamente
                 if (_swingCountField != null) {
-                    _swingCountField.setData(swingCount); // Aggiorna il totale progressivo
+                    _swingCountField.setData(swingCount.toNumber());
                 }
+                
                 if (_swingGraphField != null) {
-                    _swingGraphField.setData(1); // Crea il picco nel grafico
+                    // Mandiamo un valore più alto (es. 10) per rendere il picco più visibile nel grafico
+                    _swingGraphField.setData(10); 
                 }
 
                 if (Toybox has :Attention) {
