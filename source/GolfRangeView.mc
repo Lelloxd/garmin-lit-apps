@@ -33,6 +33,7 @@ class GolfRangeView extends WatchUi.View {
         // 2. Recupero dati (Swing dal delegate, Calorie dal sistema)
         var swingCount = (_delegate != null) ? _delegate.getSwingCount() : 0;
         var isRecording = (_delegate != null) ? _delegate.getIsRecording() : false;
+        var lastAction = (_delegate != null && _delegate has :getLastAction) ? _delegate.getLastAction() : 0;
         
         var info = Activity.getActivityInfo();
         var calories = (info != null && info.calories != null) ? info.calories : 0;
@@ -47,7 +48,14 @@ class GolfRangeView extends WatchUi.View {
         // Indicatore di Stato (Pallino colorato + Testo)
         var statusColor = isRecording ? Graphics.COLOR_GREEN : Graphics.COLOR_RED;
         dc.setColor(statusColor, Graphics.COLOR_TRANSPARENT);
-        var statusText = isRecording ? "RECORDING" : "STOPPED";
+        var statusText = "STOPPED";
+        if (isRecording) {
+            statusText = "RECORDING";
+        } else if (lastAction == 1) {
+            statusText = "SAVED";
+        } else if (lastAction == 2) {
+            statusText = "STOPPED";
+        }
         dc.drawText(_screenWidth / 2, _screenHeight * 0.12, Graphics.FONT_XTINY, statusText, Graphics.TEXT_JUSTIFY_CENTER);
 
         // --- SEZIONE CENTRALE: SWINGS ---

@@ -7,6 +7,7 @@ using Toybox.Sensor;
 using Toybox.FitContributor;
 using Toybox.Math;
 using Toybox.Attention;
+using Toybox.Activity;
 
 class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
 
@@ -15,6 +16,7 @@ class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
     var isRecording = false;
     var totalDistance = 0;
     var parentView = null;
+    var lastAction = 0; // 0: none, 1: saved, 2: discarded
 
     // Campi FIT per il conteggio swing
     const SWING_COUNT_FIELD_ID = 0;
@@ -55,7 +57,11 @@ function initialize(view) {
             :sampleRate => 25,
             :enableAccelerometer => true
         };
-        Sensor.registerSensorDataListener(method(:onSensor), options);
+        if (Sensor has :registerSensorDataListener) {
+            Sensor.registerSensorDataListener(method(:onSensor), options);
+        } else {
+            System.println("Warning: registerSensorDataListener not supported on this device/firmware.");
+        }
     }
 
     // Gestione del pulsante fisico - ENTER per avviare/fermare
@@ -137,9 +143,14 @@ function startRecording() {
                 // Se mettiamo il dizionario in una variabile locale 'options', 
                 // il compilatore è meno aggressivo nel controllo dei tipi.
                 
+                var sportType = ActivityRecording.SPORT_GENERIC;
+                if (ActivityRecording has :SPORT_GOLF) {
+                    sportType = ActivityRecording.SPORT_GOLF;
+                }
+
                 var options = {
                     :name => "Golf Range",
-                    :sport => ActivityRecording.SPORT_GOLF,
+                    :sport => sportType,
                     :subSport => ActivityRecording.SUB_SPORT_GENERIC
                 };
 
@@ -154,6 +165,7 @@ function startRecording() {
                 isRecording = true;
                 swingCount = 0;
                 lastSwingTime = 0;
+                lastAction = 0;
 
                 if (Toybox has :Attention) {
                     var vibeData = [new Attention.VibeProfile(30, 200)];
@@ -173,14 +185,54 @@ function startRecording() {
             if (_swingCountField != null) {
                 _swingCountField.setData(swingCount);
             }
-            // 2. FERMA
-            session.stop();
-            // 3. SALVA
-            session.save();
             
-            isRecording = false;
+            // 2. FERMA TEMPORANEAMENTE
+            session.stop();
+            isRecording = false; // Fermati graficamente
+            
+            // 3. RECUPERO INFO PER CONTROLLO
+            var info = Activity.getActivityInfo();
+            var calories = (info != null && info.calories != null) ? info.calories : 0;
+            
+            // 4. CHIEDI O SCARTA
+            if (swingCount > 0 || calories > 0) {
+                var menu = new WatchUi.Menu2({:title=>"Activity Paused"});
+                menu.addItem(new WatchUi.MenuItem("Save", "Swings: " + swingCount + " | Kcal: " + calories, "save", null));
+                menu.addItem(new WatchUi.MenuItem("Discard", null, "discard", null));
+                menu.addItem(new WatchUi.MenuItem("Resume", null, "resume", null));
+                WatchUi.pushView(menu, new SaveMenuDelegate(self), WatchUi.SLIDE_UP);
+            } else {
+                handleSaveDecision("discard"); // scarta direttamente
+            }
+            
             WatchUi.requestUpdate();
         }
+    }
+
+    function handleSaveDecision(action) {
+        if (action.equals("save")) {
+            session.save();
+            lastAction = 1; // saved
+        } else if (action.equals("discard")) {
+            session.discard();
+            lastAction = 2; // discarded
+        } else if (action.equals("resume")) {
+            session.start();
+            isRecording = true;
+            lastAction = 0;
+            WatchUi.requestUpdate();
+            return; // no vibration for resume
+        }
+        
+        // VIBRAZIONE FEEDBACK LUNGA
+        if (Toybox has :Attention) {
+            var vibeData = [
+                new Attention.VibeProfile(100, 500)
+            ];
+            Attention.vibrate(vibeData);
+        }
+
+        WatchUi.requestUpdate();
     }
 
     function onSensor(sensorData as Sensor.SensorData) as Void {
@@ -227,6 +279,10 @@ function startRecording() {
         return isRecording;
     }
 
+    function getLastAction() {
+        return lastAction;
+    }
+
     function getTotalDistance() {
         return totalDistance;
     }
@@ -260,5 +316,28 @@ class ThresholdMenuDelegate extends WatchUi.Menu2InputDelegate {
 
     function onBack() {
         WatchUi.popView(WatchUi.SLIDE_RIGHT);
+    }
+}
+
+// Delegate per il menu di conferma salvataggio
+class SaveMenuDelegate extends WatchUi.Menu2InputDelegate {
+    var _mainDelegate;
+
+    function initialize(mainDelegate) {
+        Menu2InputDelegate.initialize();
+        _mainDelegate = mainDelegate;
+    }
+
+    function onSelect(item) {
+        var id = item.getId();
+        if (id != null && id instanceof Toybox.Lang.String) {
+            _mainDelegate.handleSaveDecision(id);
+        }
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
+    }
+
+    function onBack() {
+        _mainDelegate.handleSaveDecision("resume");
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
     }
 }

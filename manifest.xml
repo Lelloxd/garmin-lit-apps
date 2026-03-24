@@ -6,6 +6,7 @@
         </iq:languages>
         <iq:products>
             <iq:product id="vivoactive3"/>
+            <iq:product id="approachs50"/>
             <iq:product id="approachs60"/>
             <iq:product id="approachs62"/>
             <iq:product id="approachs7042mm"/>
