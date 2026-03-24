@@ -26,7 +26,7 @@ class GolfRangeDelegate extends WatchUi.BehaviorDelegate {
     var lastSwingTime = 0;
     var lastUpdateTime = 0;
 
-    var SWING_THRESHOLD = 2000; // Valore di default
+    var SWING_THRESHOLD = 3500; // Valore di default (Average Swing)
     const MIN_TIME_BETWEEN_SWINGS = 1500; // Millisecondi tra uno swing e l'altro
 
     const SWING_GRAPH_FIELD_ID = 1;      // Grafico nel tempo
@@ -45,10 +45,20 @@ function initialize(view) {
         }
 
         if (storedThreshold != null && (storedThreshold instanceof Toybox.Lang.Number)) {
-            SWING_THRESHOLD = storedThreshold;
+            // Se il valore salvato non è uno dei 5 nuovi, resettiamo a Average
+            if (storedThreshold != 2000 && storedThreshold != 2750 && storedThreshold != 3500 && storedThreshold != 4250 && storedThreshold != 5000) {
+                SWING_THRESHOLD = 3500;
+            } else {
+                SWING_THRESHOLD = storedThreshold;
+            }
         } else if (storedThreshold != null) {
-            // Se per qualche motivo è una stringa, la convertiamo
-            SWING_THRESHOLD = storedThreshold.toNumber();
+            // Se per qualche motivo è una stringa, la convertiamo e verifichiamo
+            var val = storedThreshold.toNumber();
+            if (val != 2000 && val != 2750 && val != 3500 && val != 4250 && val != 5000) {
+                SWING_THRESHOLD = 3500;
+            } else {
+                SWING_THRESHOLD = val;
+            }
         }
 
         // Resto del codice dell'accelerometro...
@@ -121,14 +131,14 @@ function initialize(view) {
 
     // Funzione helper per aprire il menu (usata sia da Swipe che da Tasto)
     function openThresholdMenu() {
-        var menu = new WatchUi.Menu2({:title=>"Sensitivity"});
+        var menu = new WatchUi.Menu2({:title=>"Swing Speed"});
         
         var options = [
-            ["Very High", 2000],
-            ["High", 2750],
-            ["Standard", 3500],
-            ["Low", 4250],
-            ["Very Low", 5000]
+            ["Slow Swing", 2000],
+            ["Moderate Swing", 2750],
+            ["Average Swing", 3500],
+            ["High Swing", 4250],
+            ["Fast Swing", 5000]
         ];
 
         for (var i = 0; i < options.size(); i++) {
