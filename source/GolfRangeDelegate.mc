@@ -54,8 +54,10 @@ function initialize(view) {
         // Resto del codice dell'accelerometro...
         var options = {
             :period => 1,
-            :sampleRate => 25,
-            :enableAccelerometer => true
+            :accelerometer => {
+                :enabled => true,
+                :sampleRate => 25
+            }
         };
         if (Sensor has :registerSensorDataListener) {
             Sensor.registerSensorDataListener(method(:onSensor), options);
@@ -119,16 +121,26 @@ function initialize(view) {
 
     // Funzione helper per aprire il menu (usata sia da Swipe che da Tasto)
     function openThresholdMenu() {
-        var menu = new WatchUi.Menu2({:title=>"Threshold"});
-        // Aggiunge le opzioni da 1500 a 5000
-        for (var i = 1500; i <= 5000; i += 250) {
+        var menu = new WatchUi.Menu2({:title=>"Sensitivity"});
+        
+        var options = [
+            ["Very High", 2000],
+            ["High", 2750],
+            ["Standard", 3500],
+            ["Low", 4250],
+            ["Very Low", 5000]
+        ];
+
+        for (var i = 0; i < options.size(); i++) {
+            var label = options[i][0];
+            var val = options[i][1];
             var subLabel = null;
-            // Evidenzia il valore attuale
-            if (i == SWING_THRESHOLD) {
-                subLabel = "Current";
+            
+            if (val == SWING_THRESHOLD) {
+                subLabel = "Current Setting";
             }
-            // L'ID dell'item sarà il valore stesso della soglia
-            menu.addItem(new WatchUi.MenuItem(i.toString(), subLabel, i, null));
+            
+            menu.addItem(new WatchUi.MenuItem(label, subLabel, val, null));
         }
 
         var delegate = new ThresholdMenuDelegate(self);
@@ -240,32 +252,36 @@ function startRecording() {
 
         var acc = sensorData.accelerometerData;
         if (acc != null && acc.x != null && acc.y != null && acc.z != null) {
-            var x = acc.x[0];
-            var y = acc.y[0];
-            var z = acc.z[0];
+            var size = acc.x.size();
+            
+            for (var i = 0; i < size; i++) {
+                var x = acc.x[i];
+                var y = acc.y[i];
+                var z = acc.z[i];
 
-            var magnitude = Math.sqrt((x*x) + (y*y) + (z*z)).toNumber();
-            var now = System.getTimer();
+                var magnitude = Math.sqrt((x*x) + (y*y) + (z*z)).toNumber();
+                var now = System.getTimer();
 
-            if (magnitude > SWING_THRESHOLD && (now - lastSwingTime > MIN_TIME_BETWEEN_SWINGS)) {
-                swingCount++;
-                lastSwingTime = now;
+                if (magnitude > SWING_THRESHOLD && (now - lastSwingTime > MIN_TIME_BETWEEN_SWINGS)) {
+                    swingCount++;
+                    lastSwingTime = now;
 
-                if (_swingCountField != null) {
-                    _swingCountField.setData(swingCount.toNumber());
+                    if (_swingCountField != null) {
+                        _swingCountField.setData(swingCount.toNumber());
+                    }
+                    
+                    if (_swingGraphField != null) {
+                        _swingGraphField.setData(10); 
+                    }
+
+                    if (Toybox has :Attention) {
+                        var vibeData = [new Attention.VibeProfile(20, 50)];
+                        Attention.vibrate(vibeData);
+                    }
+
+                    WatchUi.requestUpdate(); 
+                    break; // Esci dal loop se abbiamo già contato lo swing in questo secondo
                 }
-                
-                if (_swingGraphField != null) {
-                    // Mandiamo un valore più alto (es. 10) per rendere il picco più visibile nel grafico
-                    _swingGraphField.setData(10); 
-                }
-
-                if (Toybox has :Attention) {
-                    var vibeData = [new Attention.VibeProfile(20, 50)];
-                    Attention.vibrate(vibeData);
-                }
-
-                WatchUi.requestUpdate(); 
             }
         }
     }
