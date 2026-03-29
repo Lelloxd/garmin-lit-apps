@@ -62,17 +62,21 @@ function initialize(view) {
         }
 
         // Resto del codice dell'accelerometro...
-        var options = {
-            :period => 1,
-            :accelerometer => {
-                :enabled => true,
-                :sampleRate => 25
+        try {
+            var options = {
+                :period => 1,
+                :accelerometer => {
+                    :enabled => true,
+                    :sampleRate => 25
+                }
+            };
+            if (Sensor has :registerSensorDataListener) {
+                Sensor.registerSensorDataListener(method(:onSensor), options);
+            } else {
+                System.println("Warning: registerSensorDataListener not supported on this device/firmware.");
             }
-        };
-        if (Sensor has :registerSensorDataListener) {
-            Sensor.registerSensorDataListener(method(:onSensor), options);
-        } else {
-            System.println("Warning: registerSensorDataListener not supported on this device/firmware.");
+        } catch (e) {
+            System.println("Error init sensor: " + e.getErrorMessage());
         }
     }
 
@@ -265,9 +269,10 @@ function startRecording() {
             var size = acc.x.size();
             
             for (var i = 0; i < size; i++) {
-                var x = acc.x[i];
-                var y = acc.y[i];
-                var z = acc.z[i];
+                // Cast to float to prevent 32-bit integer overflow during squaring
+                var x = acc.x[i].toFloat();
+                var y = acc.y[i].toFloat();
+                var z = acc.z[i].toFloat();
 
                 var magnitude = Math.sqrt((x*x) + (y*y) + (z*z)).toNumber();
                 var now = System.getTimer();
